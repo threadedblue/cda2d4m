@@ -7,8 +7,7 @@ import java.io.InputStream;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openhealthtools.mdht.uml.cda.ClinicalDocument;
-import org.openhealthtools.mdht.uml.cda.ccd.ContinuityOfCareDocument;
-import org.openhealthtools.mdht.uml.cda.consol.ConsolPackage;
+import org.openhealthtools.mdht.uml.cda.Section;
 import org.openhealthtools.mdht.uml.cda.util.CDAUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,10 +22,20 @@ class CDA2D4MTest {
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 		sut = new CDA2D4M();
-		InputStream is1 = CDA2D4M.class.getClassLoader()
+		InputStream is = CDA2D4M.class.getClassLoader()
 				.getResourceAsStream("Carla633_Johns824_a093c28e-4a7b-47d5-960c-39a1182fb694.xml");
-		InputStream is2 = CDA2D4M.class.getClassLoader().getResourceAsStream("problems-and-medications.xml");
-		cda = CDAUtil.load(is1);
+		InputStream is2 = CDA2D4M.class.getClassLoader()
+				.getResourceAsStream("Carla633_Johns824_a093c28e-4a7b-47d5-960c-39a1182fb694.xml");
+		cda = CDAUtil.load(is);
+//		ClinicalDocument cda2 = CDAUtil.load(is2);
+//		LOG.debug("cda=" + cda);
+//		LOG.debug("cda2=" + cda2);
+//		for (Section sec : cda.getSections()) {
+//			LOG.debug("cdasec=" + sec.getTitle().getText());
+//		}
+//		for (Section sec : cda2.getSections()) {
+//			LOG.debug("cda2sec=" + sec.getTitle().getText());
+//		}
 	}
 
 	@Test
@@ -37,7 +46,7 @@ class CDA2D4MTest {
 		}
 	}
 	
-	@Test
+//	@Test
 	void testSection() {
 //		assertEquals("II.a093c28e-4a7b-47d5-960c-39a1182fb694", sut.extract(cda.getId()).get(0));
 		for(String s : sut.extract(cda.getSections())) {
@@ -57,23 +66,23 @@ class CDA2D4MTest {
 //		LOG.debug(sut.extract(cda.getId()).get(0));
 	}
 
-	@Test
+//	@Test
 	void testExtractII() {
 		assertEquals("II.a093c28e-4a7b-47d5-960c-39a1182fb694", sut.extract(cda.getId()).get(0));
 	}
 
-	@Test
+//	@Test
 	void testExtractTS() {
 		assertEquals("TS.20201006100351", sut.extract(cda.getEffectiveTime()).get(0));
 	}
 
-	@Test
+//	@Test
 	void testExtractCE() {
 		assertEquals("CE.34133-9", sut.extract(cda.getCode()).get(0));
 		assertEquals("CE.LOINC", sut.extract(cda.getCode()).get(1));
 	}
 
-	@Test
+//	@Test
 	void testExtractCS() {
 		assertEquals("CS.en-US", sut.extract(cda.getLanguageCode()).get(0));
 	}

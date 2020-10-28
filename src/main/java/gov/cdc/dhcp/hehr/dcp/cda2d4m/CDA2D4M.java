@@ -18,16 +18,22 @@ import org.kohsuke.args4j.Option;
 import org.openhealthtools.mdht.uml.cda.Act;
 import org.openhealthtools.mdht.uml.cda.AssignedEntity;
 import org.openhealthtools.mdht.uml.cda.ClinicalDocument;
+import org.openhealthtools.mdht.uml.cda.Component4;
 import org.openhealthtools.mdht.uml.cda.Encounter;
 import org.openhealthtools.mdht.uml.cda.Entry;
 import org.openhealthtools.mdht.uml.cda.EntryRelationship;
+import org.openhealthtools.mdht.uml.cda.LabeledDrug;
+import org.openhealthtools.mdht.uml.cda.Material;
 import org.openhealthtools.mdht.uml.cda.Observation;
+import org.openhealthtools.mdht.uml.cda.Organization;
+import org.openhealthtools.mdht.uml.cda.Organizer;
 import org.openhealthtools.mdht.uml.cda.Patient;
 import org.openhealthtools.mdht.uml.cda.PatientRole;
 import org.openhealthtools.mdht.uml.cda.Performer2;
 import org.openhealthtools.mdht.uml.cda.Procedure;
 import org.openhealthtools.mdht.uml.cda.RegionOfInterest;
 import org.openhealthtools.mdht.uml.cda.Section;
+import org.openhealthtools.mdht.uml.cda.SubstanceAdministration;
 import org.openhealthtools.mdht.uml.cda.util.CDAUtil;
 import org.openhealthtools.mdht.uml.hl7.datatypes.AD;
 import org.openhealthtools.mdht.uml.hl7.datatypes.ADXP;
@@ -35,10 +41,13 @@ import org.openhealthtools.mdht.uml.hl7.datatypes.CD;
 import org.openhealthtools.mdht.uml.hl7.datatypes.CE;
 import org.openhealthtools.mdht.uml.hl7.datatypes.CS;
 import org.openhealthtools.mdht.uml.hl7.datatypes.II;
+import org.openhealthtools.mdht.uml.hl7.datatypes.ON;
 import org.openhealthtools.mdht.uml.hl7.datatypes.TS;
 import org.openhealthtools.mdht.uml.hl7.rim.ActRelationship;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import edu.mit.ll.graphulo.util.D4MTableWriter;
 
 public class CDA2D4M implements Runnable {
 
@@ -72,7 +81,11 @@ public class CDA2D4M implements Runnable {
 	@Option(name = "-o", aliases = "--output", required = true, usage = "Base name of the table set for D4M.")
 	private String output;
 
-	public static final String DELIM = ":";
+	public static final String PATH_DELIM = ".";
+
+	public static final String VALUE_DELIM = ":";
+
+	D4MTableWriter writer;
 	
 	public CDA2D4M() {
 	}
@@ -118,9 +131,9 @@ public class CDA2D4M implements Runnable {
 	public List<String> extract(List<Section> el) {
 		List<String> list = new ArrayList<String>();
 		for (Section item : el) {
-			LOG.trace("Section==>");
+			LOG.trace("Sections==>");
 			list.addAll(extract(item));
-			LOG.trace("<==Section");
+			LOG.trace("<==Sections");
 		}
 		return list;
 	}
@@ -133,63 +146,112 @@ public class CDA2D4M implements Runnable {
 		return list;
 	}
 
-//	public List<String> extract(ImmunizationsSection el) {
-//		List<String> list = new ArrayList<String>();
-//		list.add(String.format("%s.%s", el.eClass().getName(), el.getSectionId()));
-//		return list;
-//	}
-
-//	public List<String> extract(List<Observation> el, int pkg) {
-//		List<String> list = new ArrayList<String>();
-//		for (Observation item : el) {
-//			extract(item);
-//		}
-//		return list;
-//	}
-
-//	public List<String> extract(List<Performers> el) {
-//		List<String> list = new ArrayList<String>();
-//		for (Observation item : el) {
-//			extract(item);
-//		}
-//		return list;
-//	}
-
 	public List<String> extract(Section el) {
 		List<String> list = new ArrayList<String>();
 		String title = el.getTitle().getText().replaceAll(" ", "_");
+		LOG.trace("Section==>" + el);
 		LOG.trace("Section.title=" + title);
 		for (Entry item : el.getEntries()) {
 			List<String> list1 = extract(item);
 			for (String s : list1) {
-				list.add(String.format("%s.%s", title, s));
+				list.add(String.format("%s%s%s", title, PATH_DELIM, s));
 			}
 		}
+		LOG.trace("<==Section " + list);
 		return list;
 	}
 
 	public List<String> extract(Entry el) {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
-			LOG.trace("Entry==>");
-			list.addAll(extract(el.getObservation()));
+			LOG.trace("Entry==>" + el);
+//			list.addAll(extract(el.getObservation()));
 			list.addAll(extract(el.getEncounter()));
 			list.addAll(extract(el.getProcedure()));
-			list.addAll(extract(el.getRegionOfInterest()));
+//			list.addAll(extract(el.getRegionOfInterest()));
+			list.addAll(extract(el.getOrganizer()));
+			list.addAll(extract(el.getSubstanceAdministration()));
 			list.addAll(extract(el.getAct()));
-			LOG.trace("<==Entry");
+			LOG.trace("<==Entry " + list);
 		}
 		return list;
 	}
 
+	public List<String> extract(Organizer el) {
+		List<String> list = new ArrayList<String>();
+		if (el != null) {
+			LOG.trace("Organizer==>" + el);
+			list.addAll(extract(el.getCode()));
+			for (Component4 el1 : el.getComponents()) {
+				list.addAll(extract(el1.getObservation()));
+			}
+			LOG.trace("<==Organizer " + list);
+		}
+		return list;
+	}
+	
 	public List<String> extract(Observation el) {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
-			LOG.trace("Observation==>");
+			LOG.trace("Observation==>" + el);
 			for (String s : extract(el.getCode())) {
-				list.add(String.format("%s.%s", el.eClass().getName(), s));
+				list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, s));
 			}
 			LOG.trace("<==Observation " + list);
+		}
+		return list;
+	}
+
+	public List<String> extract(SubstanceAdministration el) {
+		List<String> list = new ArrayList<String>();
+		if (el != null) {
+			LOG.trace("SubstanceAdministration==>" + el);
+			for (String s : extract(el.getCode())) {
+				list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, s));
+			}
+			list.addAll(extract(el.getConsumable().getManufacturedProduct().getManufacturedMaterial()));
+			list.addAll(extract(el.getConsumable().getManufacturedProduct().getManufacturedLabeledDrug()));
+			list.addAll(extract(el.getConsumable().getManufacturedProduct().getManufacturerOrganization()));
+			LOG.trace("<==SubstanceAdministration " + list);
+		}
+		return list;
+	}
+
+	public List<String> extract(Organization el) {
+		List<String> list = new ArrayList<String>();
+		if (el != null) {
+			list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, el.getNames().get(0).getText()));
+			LOG.trace("Organization==>" + el);
+			for (ON el1 : el.getNames()) {
+				list.addAll(extract(el1));
+			}
+			LOG.trace("<==Organization " + list);
+		}
+		return list;
+	}
+
+	public List<String> extract(LabeledDrug el) {
+		List<String> list = new ArrayList<String>();
+		if (el != null) {
+			list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, el.getName().getText()));
+			LOG.trace("LabeledDrug==>" + el);
+			for (String s : extract(el.getCode())) {
+				list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, s));
+			}
+			LOG.trace("<==LabeledDrug " + list);
+		}
+		return list;
+	}
+
+	public List<String> extract(Material el) {
+		List<String> list = new ArrayList<String>();
+		if (el != null) {
+			list.add(String.format("%s%sTitle%s%s", el.eClass().getName(), PATH_DELIM, VALUE_DELIM, el.getName().getText()));
+			LOG.trace("Material==>" + el);
+			for (String s : extract(el.getCode())) {
+				list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, s));
+			}
+			LOG.trace("<==Material " + list);
 		}
 		return list;
 	}
@@ -197,10 +259,10 @@ public class CDA2D4M implements Runnable {
 	public List<String> extract(Encounter el) {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
-			LOG.trace("Encounter==>");
+			LOG.trace("Encounter==>" + el);
 			list.addAll(extract(el.getCode()));
 			list.addAll(extract(el.getPriorityCode()));
-			LOG.trace("<==Encounter");
+			LOG.trace("<==Encounter " + list);
 		}
 		return list;
 	}
@@ -208,10 +270,10 @@ public class CDA2D4M implements Runnable {
 	public List<String> extract(Procedure el) {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
-			LOG.trace("Procedure==>");
+			LOG.trace("Procedure==>" + el);
 			list.addAll(extract(el.getCode()));
 			list.addAll(extract(el.getPriorityCode()));
-			LOG.trace("<==Procedure");
+			LOG.trace("<==Procedure " + list);
 		}
 		return list;
 	}
@@ -235,21 +297,21 @@ public class CDA2D4M implements Runnable {
 	public List<String> extract(Act el) {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
-			LOG.trace("Act==>");
+			LOG.trace("Act==>" + el);
 			list.addAll(extract(el.getCode()));
-			for (Observation el1 : el.getObservations()) {
-				list.addAll(extract(el1));
-			}
-			for (Encounter el1 : el.getEncounters()) {
-				list.addAll(extract(el1));
-			}
-			for (Procedure el1 : el.getProcedures()) {
-				list.addAll(extract(el1));
-			}
+//			for (Observation el1 : el.getObservations()) {
+//				list.addAll(extract(el1));
+//			}
+//			for (Encounter el1 : el.getEncounters()) {
+//				list.addAll(extract(el1));
+//			}
+//			for (Procedure el1 : el.getProcedures()) {
+//				list.addAll(extract(el1));
+//			}
 			for (EntryRelationship el1 : el.getEntryRelationships()) {
 				list.addAll(extract(el1));
 			}
-			LOG.trace("<==Act");
+			LOG.trace("<==Act " + list);
 		}
 		return list;
 	}
@@ -257,11 +319,12 @@ public class CDA2D4M implements Runnable {
 	public List<String> extract(EntryRelationship el) {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
-			LOG.trace("EntryRelationship==>");
+			LOG.trace("EntryRelationship==>" + el);
 			list.addAll(extract(el.getObservation()));
 			list.addAll(extract(el.getEncounter()));
 			list.addAll(extract(el.getProcedure()));
-			LOG.trace("<==EntryRelationship");
+			list.addAll(extract(el.getSubstanceAdministration()));
+			LOG.trace("<==EntryRelationship " + list);
 		}
 		return list;
 	}
@@ -269,7 +332,7 @@ public class CDA2D4M implements Runnable {
 	public List<String> extract(Performer2 el) {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
-			list.add(String.format("%s.%s", el.eClass().getName(), el.getAssignedEntity()));
+			list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, el.getAssignedEntity()));
 		}
 		return list;
 	}
@@ -277,8 +340,8 @@ public class CDA2D4M implements Runnable {
 	public List<String> extract(AssignedEntity el) {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
-			list.add(String.format("%s.%s", el.eClass().getName(), el.getIds()));
-//		list.add(String.format("%s.%s", el.eClass().getName(), el.getParticipations().get(0).));
+			list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, el.getIds()));
+//		list.add(String.format("%s%s%s", el.eClass().getName(), el.getParticipations().get(0).));
 		}
 		return list;
 	}
@@ -295,9 +358,9 @@ public class CDA2D4M implements Runnable {
 	public List<String> extract(Patient el) {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
-			list.add(String.format("%s.%s", el.eClass().getName(), el.getRaceCode()));
-			list.add(String.format("%s.%s", el.eClass().getName(), el.getAdministrativeGenderCode()));
-			list.add(String.format("%s.%s", el.eClass().getName(), el.getBirthTime()));
+			list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, el.getRaceCode()));
+			list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, el.getAdministrativeGenderCode()));
+			list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, el.getBirthTime()));
 		}
 		return list;
 	}
@@ -313,7 +376,7 @@ public class CDA2D4M implements Runnable {
 	public List<String> extract(ADXP el) {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
-			list.add(String.format("%s%s%s", el.eClass().getName(), DELIM, el.getText()));
+			list.add(String.format("%s%s%s", el.eClass().getName(), VALUE_DELIM, el.getText()));
 		}
 		return list;
 	}
@@ -321,7 +384,15 @@ public class CDA2D4M implements Runnable {
 	public List<String> extract(II el) {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
-			list.add(String.format("%s.%s", el.eClass().getName(), el.getExtension()));
+			list.add(String.format("%s%s%s", el.eClass().getName(), VALUE_DELIM, el.getExtension()));
+		}
+		return list;
+	}
+
+	public List<String> extract(ON el) {
+		List<String> list = new ArrayList<String>();
+		if (el != null) {
+			list.add(String.format("%s%s%s", el.eClass().getName(), VALUE_DELIM, el.getText()));
 		}
 		return list;
 	}
@@ -329,7 +400,7 @@ public class CDA2D4M implements Runnable {
 	public List<String> extract(TS el) {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
-			list.add(String.format("%s%s%s", el.eClass().getName(), DELIM, el.getValue()));
+			list.add(String.format("%s%s%s", el.eClass().getName(), VALUE_DELIM, el.getValue()));
 		}
 		return list;
 	}
@@ -337,9 +408,7 @@ public class CDA2D4M implements Runnable {
 	public List<String> extract(CD el) {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
-			list.add(String.format("%s%s%s", el.eClass().getName(), DELIM, el.getCode()));
-			list.add(String.format("%s%s%s", el.eClass().getName(), DELIM, el.getCodeSystemName()));
-			list.add(String.format("%s%s%s", el.eClass().getName(), DELIM, el.getDisplayName()));
+			list.addAll(checkFirst(el));
 		}
 		return list;
 	}
@@ -347,19 +416,31 @@ public class CDA2D4M implements Runnable {
 	public List<String> extract(CE el) {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
-			list.add(String.format("%s%s%s", el.eClass().getName(), DELIM, el.getCode()));
-			list.add(String.format("%s%s%s", el.eClass().getName(), DELIM, el.getCodeSystemName()));
-			list.add(String.format("%s%s%s", el.eClass().getName(), DELIM, el.getDisplayName().replaceAll(" ", "_")));
+			list.addAll(checkFirst(el));
 		}
 		return list;
 	}
-
+	
 	public List<String> extract(CS el) {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
-			list.add(String.format("%s%s%s", el.eClass().getName(), DELIM, el.getCode()));
-			list.add(String.format("%s%s%s", el.eClass().getName(), DELIM, el.getCodeSystemName()));
-			list.add(String.format("%s%s%s", el.eClass().getName(), DELIM, el.getDisplayName()));
+			list.addAll(checkFirst(el));
+		}
+		return list;
+	}
+	
+	public List<String> checkFirst(CD el) {
+		List<String> list = new ArrayList<String>();
+		if (el != null) {
+			if (el.getCode() != null) {
+				list.add(String.format("%s%s%s", el.eClass().getName(), VALUE_DELIM, el.getCode()));
+			}
+			if (el.getCodeSystemName() != null) {
+				list.add(String.format("%s%s%s", el.eClass().getName(), VALUE_DELIM, el.getCodeSystemName()));
+			}
+			if (el.getDisplayName() != null) {
+				list.add(String.format("%s%s%s", el.eClass().getName(), VALUE_DELIM, el.getDisplayName()));
+			}
 		}
 		return list;
 	}
