@@ -1,0 +1,4 @@
+creds:
+  instance: accumulo
+  user: gcr
+  password: $Hello1Hello1$

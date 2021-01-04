@@ -31,7 +31,7 @@ public class CDA2D4M implements Runnable {
 	@Option(name = "-c", aliases = "--config", required = false, usage = "Path to hadoop config directory.")
 	private String configFilePath = "/usr/local/hadoop/etc/hadoop";
 
-	@Option(name = "-l", aliases = "--instance", required = false, usage = "Name of Accumulo instance.")
+	@Option(name = "-a", aliases = "--instance", required = false, usage = "Name of Accumulo instance.")
 	private String accumuloInstance;
 
 	@Option(name = "-zk", aliases = "--zookeeper", required = true, usage = "URL to zookeeper instance as a string.")
@@ -39,6 +39,9 @@ public class CDA2D4M implements Runnable {
 
 	@Option(name = "-ow", aliases = "--overwrite", required = false, usage = "Overwrite output if exists.")
 	private boolean overwrite;
+
+	@Option(name = "-fo", aliases = "--fileout", required = false, usage = "Output to a file no DB")
+	private boolean fileOut;
 
 	@Option(name = "-r", aliases = "--recurse", required = false, usage = "Set to reacuse throught directories. default = false;")
 	private boolean recurse;
@@ -66,19 +69,48 @@ public class CDA2D4M implements Runnable {
 
 	public void run() {
 		int cnt = 0;
-		if(!acc.connect()) {
+		if (fileOut) {
+			fileOut(input);
+			return;
+		}
+		if (!acc.connect()) {
 			return;
 		}
 		acc.initAccumulo();
 		try {
 			Set<String> files = listFiles(input, 1);
+			boolean init = true;
 			for (String file : files) {
 				Path fileIn = Paths.get(input, file);
 				InputStream is = Files.newInputStream(fileIn, StandardOpenOption.READ);
 				ClinicalDocument cda = CDAUtil.load(is);
 				List<String> cols = flat.build(cda);
+				if (init) {
+					init = false;
+				}
 				acc.doList(cols);
 				cnt++;
+			}
+		} catch (IOException e) {
+			LOG.error("IO==>", e);
+		} catch (Exception e) {
+			LOG.error("Ex==>", e);
+		}
+	}
+
+	public void fileOut(String file) {
+		try {
+			Set<String> files = listFiles(input, 1);
+			Object[] oo = files.toArray();
+			Path fileIn = Paths.get(input, oo[0].toString());
+			InputStream is = Files.newInputStream(fileIn, StandardOpenOption.READ);
+			ClinicalDocument cda = CDAUtil.load(is);
+			List<String> cols = flat.build(cda);
+			Path here = Path.of("out.txt");
+			Files.deleteIfExists(here);
+			Files.createFile(here);
+			for (String s : cols) {
+				Files.writeString(here, s + System.lineSeparator(), StandardOpenOption.APPEND);
 			}
 		} catch (IOException e) {
 			LOG.error("IO==>", e);

@@ -28,6 +28,8 @@ import org.openhealthtools.mdht.uml.hl7.datatypes.CD;
 import org.openhealthtools.mdht.uml.hl7.datatypes.CE;
 import org.openhealthtools.mdht.uml.hl7.datatypes.CS;
 import org.openhealthtools.mdht.uml.hl7.datatypes.II;
+import org.openhealthtools.mdht.uml.hl7.datatypes.IVL_TS;
+import org.openhealthtools.mdht.uml.hl7.datatypes.IVXB_TS;
 import org.openhealthtools.mdht.uml.hl7.datatypes.ON;
 import org.openhealthtools.mdht.uml.hl7.datatypes.TS;
 import org.openhealthtools.mdht.uml.hl7.rim.ActRelationship;
@@ -46,7 +48,7 @@ public class CDA2AACols {
 		List<String> list = new ArrayList<String>();
 		LOG.trace("ClinicalDocument==>");
 		list.addAll(build(el.getId()));
-		list.addAll(build(el.getEffectiveTime()));
+		list.addAll(build(el.getEffectiveTime(), "effectiveTim"));
 		list.addAll(build(el.getCode()));
 		list.addAll(build(el.getLanguageCode()));
 		list.addAll(buildPatientRoles(el.getPatientRoles()));
@@ -81,7 +83,7 @@ public class CDA2AACols {
 		for (Entry item : el.getEntries()) {
 			List<String> list1 = build(item);
 			for (String s : list1) {
-				list.add(String.format("%s%s%s", title, PATH_DELIM, s));
+				list.add(String.format("%s%s%s", title, PATH_DELIM, fillInTheBlanks(s)));
 			}
 		}
 		LOG.trace("<==Section " + list);
@@ -122,7 +124,7 @@ public class CDA2AACols {
 		if (el != null) {
 			LOG.trace("Observation==>" + el);
 			for (String s : build(el.getCode())) {
-				list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, s));
+				list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, fillInTheBlanks(s)));
 			}
 			LOG.trace("<==Observation " + list);
 		}
@@ -163,7 +165,7 @@ public class CDA2AACols {
 			list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, el.getName().getText()));
 			LOG.trace("LabeledDrug==>" + el);
 			for (String s : build(el.getCode())) {
-				list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, s));
+				list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, fillInTheBlanks(s)));
 			}
 			LOG.trace("<==LabeledDrug " + list);
 		}
@@ -177,7 +179,7 @@ public class CDA2AACols {
 					el.getName().getText()));
 			LOG.trace("Material==>" + el);
 			for (String s : build(el.getCode())) {
-				list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, s));
+				list.add(String.format("%s%s%s", el.eClass().getName(), PATH_DELIM, fillInTheBlanks(s)));
 			}
 			LOG.trace("<==Material " + list);
 		}
@@ -188,8 +190,12 @@ public class CDA2AACols {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
 			LOG.trace("Encounter==>" + el);
+			for (II el1 : el.getIds()) {
+				list.addAll(build(el1));
+			}
 			list.addAll(build(el.getCode()));
 			list.addAll(build(el.getPriorityCode()));
+			list.addAll(build(el.getEffectiveTime()));
 			LOG.trace("<==Encounter " + list);
 		}
 		return list;
@@ -312,7 +318,24 @@ public class CDA2AACols {
 	public List<String> build(II el) {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
-			list.add(String.format("%s%s%s", el.eClass().getName(), VALUE_DELIM, el.getExtension()));
+			list.add(String.format("%s%s%s", "id", VALUE_DELIM, el.getExtension()));
+		}
+		return list;
+	}
+
+	public List<String> build(IVL_TS el) {
+		List<String> list = new ArrayList<String>();
+		if (el != null) {
+			list.addAll(build(el.getLow(), "low"));
+			list.addAll(build(el.getHigh(), "high"));
+		}
+		return list;
+	}
+
+	public List<String> build(IVXB_TS el, String highlow) {
+		List<String> list = new ArrayList<String>();
+		if (el != null) {
+			list.add(String.format("effectiveTime%s%s%s%s", PATH_DELIM, highlow, VALUE_DELIM, el.getValue()));
 		}
 		return list;
 	}
@@ -325,10 +348,10 @@ public class CDA2AACols {
 		return list;
 	}
 
-	public List<String> build(TS el) {
+	public List<String> build(TS el, String name) {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
-			list.add(String.format("%s%s%s", el.eClass().getName(), VALUE_DELIM, el.getValue()));
+			list.add(String.format("%s%s%s", name, VALUE_DELIM, el.getValue()));
 		}
 		return list;
 	}
@@ -362,15 +385,19 @@ public class CDA2AACols {
 		List<String> list = new ArrayList<String>();
 		if (el != null) {
 			if (el.getCode() != null) {
-				list.add(String.format("%s%s%s", el.eClass().getName(), VALUE_DELIM, el.getCode()));
+				list.add(String.format("%s%s%s", "code", VALUE_DELIM, fillInTheBlanks(el.getCode())));
 			}
 			if (el.getCodeSystemName() != null) {
-				list.add(String.format("%s%s%s", el.eClass().getName(), VALUE_DELIM, el.getCodeSystemName()));
+				list.add(String.format("%s%s%s", "codeSystem", VALUE_DELIM, fillInTheBlanks(el.getCodeSystemName())));
 			}
 			if (el.getDisplayName() != null) {
-				list.add(String.format("%s%s%s", el.eClass().getName(), VALUE_DELIM, el.getDisplayName()));
+				list.add(String.format("%s%s%s", "codeDisplay", VALUE_DELIM, fillInTheBlanks(el.getDisplayName())));
 			}
 		}
 		return list;
+	}
+	
+	public String fillInTheBlanks(String s) {
+		return s.replaceAll(" ", "_");
 	}
 }
