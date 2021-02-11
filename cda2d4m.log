@@ -1,293 +1,179 @@
-2021-01-01 10:23:38.601 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(132) - Start==>
-2021-01-01 10:23:38.605 [main] DEBUG gov.cdc.dhcp.hehr.dcp.cda2d4m.AccumuloComponent(48) - credsFile=null
-2021-01-01 10:23:43.656 [main] DEBUG gov.cdc.dhcp.hehr.dcp.cda2d4m.AccumuloComponent(60) - input=/Users/geoffryroberts/cdcWk/synthea/output/ccd/ccda
-2021-01-01 10:23:43.663 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.AccumuloComponent(64) - Overwrite was set.  Delete/create tables.
-2021-01-01 10:23:44.211 [main] TRACE org.apache.accumulo.core.client.admin.TableOperations(188) - tid=1 Checking if table ccd exists...
-2021-01-01 10:23:44.477 [main] DEBUG org.apache.accumulo.fate.zookeeper.ZooSession(200) - Connecting to localhost:2181 with timeout 30000 with auth
-2021-01-01 10:23:49.995 [main] INFO  org.apache.zookeeper.ZooKeeper(100) - Client environment:zookeeper.version=3.4.14-4c25d480e66aadd371de8bd2fd8da255ac140bcf, built on 03/06/2019 16:18 GMT
-2021-01-01 10:23:50.007 [main] INFO  org.apache.zookeeper.ZooKeeper(100) - Client environment:host.name=mail.kaizen-ctf.com
-2021-01-01 10:23:50.014 [main] INFO  org.apache.zookeeper.ZooKeeper(100) - Client environment:java.version=13
-2021-01-01 10:23:50.020 [main] INFO  org.apache.zookeeper.ZooKeeper(100) - Client environment:java.vendor=Oracle Corporation
-2021-01-01 10:23:50.027 [main] INFO  org.apache.zookeeper.ZooKeeper(100) - Client environment:java.home=/Library/Java/JavaVirtualMachines/openjdk-13.jdk/Contents/Home
-2021-01-01 10:23:50.035 [main] INFO  org.apache.zookeeper.ZooKeeper(100) - Client environment:java.class.path=/Users/geoffryroberts/cdcWk/cda2d4m/target/classes:/Users/geoffryroberts/.p2/pool/plugins/org.junit.jupiter.api_5.6.0.v20200203-2009.jar:/Users/geoffryroberts/.p2/pool/plugins/org.junit.jupiter.engine_5.6.0.v20200203-2009.jar:/Users/geoffryroberts/.p2/pool/plugins/org.junit.jupiter.migrationsupport_5.6.0.v20200203-2009.jar:/Users/geoffryroberts/.p2/pool/plugins/org.junit.jupiter.params_5.6.0.v20200203-2009.jar:/Users/geoffryroberts/.p2/pool/plugins/org.junit.platform.commons_1.6.0.v20200203-2009.jar:/Users/geoffryroberts/.p2/pool/plugins/org.junit.platform.engine_1.6.0.v20200203-2009.jar:/Users/geoffryroberts/.p2/pool/plugins/org.junit.platform.launcher_1.6.0.v20200203-2009.jar:/Users/geoffryroberts/.p2/pool/plugins/org.junit.platform.runner_1.6.0.v20200203-2009.jar:/Users/geoffryroberts/.p2/pool/plugins/org.junit.platform.suite.api_1.6.0.v20200203-2009.jar:/Users/geoffryroberts/.p2/pool/plugins/org.junit.vintage.engine_5.6.0.v20200203-2009.jar:/Users/geoffryroberts/.p2/pool/plugins/org.opentest4j_1.2.0.v20190826-0900.jar:/Users/geoffryroberts/.p2/pool/plugins/org.apiguardian_1.1.0.v20190826-0900.jar:/Users/geoffryroberts/.p2/pool/plugins/org.junit_4.13.0.v20200204-1500.jar:/Users/geoffryroberts/.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar:/Users/geoffryroberts/.m2/repository/args4j/args4j/2.33/args4j-2.33.jar:/Users/geoffryroberts/.m2/repository/org/apache/logging/log4j/log4j-api/2.7/log4j-api-2.7.jar:/Users/geoffryroberts/.m2/repository/org/apache/logging/log4j/log4j-core/2.7/log4j-core-2.7.jar:/Users/geoffryroberts/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.7/log4j-slf4j-impl-2.7.jar:/Users/geoffryroberts/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/geoffryroberts/.m2/repository/org/apache/accumulo/accumulo-core/2.0.0/accumulo-core-2.0.0.jar:/Users/geoffryroberts/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/geoffryroberts/.m2/repository/com/github/ben-manes/caffeine/caffeine/2.7.0/caffeine-2.7.0.jar:/Users/geoffryroberts/.m2/repository/org/checkerframework/checker-qual/2.6.0/checker-qual-2.6.0.jar:/Users/geoffryroberts/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.3/error_prone_annotations-2.3.3.jar:/Users/geoffryroberts/.m2/repository/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar:/Users/geoffryroberts/.m2/repository/com/google/guava/guava/28.0-jre/guava-28.0-jre.jar:/Users/geoffryroberts/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/geoffryroberts/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/geoffryroberts/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/geoffryroberts/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/Users/geoffryroberts/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.jar:/Users/geoffryroberts/.m2/repository/com/google/protobuf/protobuf-java/3.7.1/protobuf-java-3.7.1.jar:/Users/geoffryroberts/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:/Users/geoffryroberts/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/geoffryroberts/.m2/repository/jline/jline/2.11/jline-2.11.jar:/Users/geoffryroberts/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/geoffryroberts/.m2/repository/org/apache/accumulo/accumulo-start/2.0.0/accumulo-start-2.0.0.jar:/Users/geoffryroberts/.m2/repository/org/apache/commons/commons-vfs2/2.3/commons-vfs2-2.3.jar:/Users/geoffryroberts/.m2/repository/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.jar:/Users/geoffryroberts/.m2/repository/org/apache/commons/commons-collections4/4.3/commons-collections4-4.3.jar:/Users/geoffryroberts/.m2/repository/org/apache/commons/commons-configuration2/2.5/commons-configuration2-2.5.jar:/Users/geoffryroberts/.m2/repository/org/apache/commons/commons-text/1.6/commons-text-1.6.jar:/Users/geoffryroberts/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar:/Users/geoffryroberts/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/hadoop/hadoop-client-api/3.1.1/hadoop-client-api-3.1.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/htrace/htrace-core/3.2.0-incubating/htrace-core-3.2.0-incubating.jar:/Users/geoffryroberts/.m2/repository/org/apache/thrift/libthrift/0.12.0/libthrift-0.12.0.jar:/Users/geoffryroberts/.m2/repository/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/zookeeper/zookeeper/3.4.14/zookeeper-3.4.14.jar:/Users/geoffryroberts/.m2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar:/Users/geoffryroberts/.m2/repository/com/github/spotbugs/spotbugs-annotations/3.1.9/spotbugs-annotations-3.1.9.jar:/Users/geoffryroberts/.m2/repository/org/apache/yetus/audience-annotations/0.5.0/audience-annotations-0.5.0.jar:/Users/geoffryroberts/.m2/repository/io/netty/netty/3.10.6.Final/netty-3.10.6.Final.jar:/Users/geoffryroberts/.m2/repository/org/apache/hadoop/hadoop-client-runtime/3.1.1/hadoop-client-runtime-3.1.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/Users/geoffryroberts/d4mWk/accla-graphulo/target/classes:/Users/geoffryroberts/.m2/repository/org/apache/hadoop/hadoop-common/3.2.0/hadoop-common-3.2.0.jar:/Users/geoffryroberts/.m2/repository/org/apache/hadoop/hadoop-annotations/3.2.0/hadoop-annotations-3.2.0.jar:/Users/geoffryroberts/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar:/Users/geoffryroberts/.m2/repository/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.jar:/Users/geoffryroberts/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/geoffryroberts/.m2/repository/commons-net/commons-net/3.6/commons-net-3.6.jar:/Users/geoffryroberts/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/geoffryroberts/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/Users/geoffryroberts/.m2/repository/org/eclipse/jetty/jetty-server/9.3.24.v20180605/jetty-server-9.3.24.v20180605.jar:/Users/geoffryroberts/.m2/repository/org/eclipse/jetty/jetty-http/9.3.24.v20180605/jetty-http-9.3.24.v20180605.jar:/Users/geoffryroberts/.m2/repository/org/eclipse/jetty/jetty-io/9.3.24.v20180605/jetty-io-9.3.24.v20180605.jar:/Users/geoffryroberts/.m2/repository/org/eclipse/jetty/jetty-util/9.3.24.v20180605/jetty-util-9.3.24.v20180605.jar:/Users/geoffryroberts/.m2/repository/org/eclipse/jetty/jetty-servlet/9.3.24.v20180605/jetty-servlet-9.3.24.v20180605.jar:/Users/geoffryroberts/.m2/repository/org/eclipse/jetty/jetty-security/9.3.24.v20180605/jetty-security-9.3.24.v20180605.jar:/Users/geoffryroberts/.m2/repository/org/eclipse/jetty/jetty-webapp/9.3.24.v20180605/jetty-webapp-9.3.24.v20180605.jar:/Users/geoffryroberts/.m2/repository/org/eclipse/jetty/jetty-xml/9.3.24.v20180605/jetty-xml-9.3.24.v20180605.jar:/Users/geoffryroberts/.m2/repository/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1.jar:/Users/geoffryroberts/.m2/repository/com/sun/jersey/jersey-core/1.19/jersey-core-1.19.jar:/Users/geoffryroberts/.m2/repository/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar:/Users/geoffryroberts/.m2/repository/com/sun/jersey/jersey-servlet/1.19/jersey-servlet-1.19.jar:/Users/geoffryroberts/.m2/repository/com/sun/jersey/jersey-json/1.19/jersey-json-1.19.jar:/Users/geoffryroberts/.m2/repository/org/codehaus/jettison/jettison/1.1/jettison-1.1.jar:/Users/geoffryroberts/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar:/Users/geoffryroberts/.m2/repository/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.jar:/Users/geoffryroberts/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar:/Users/geoffryroberts/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/Users/geoffryroberts/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.jar:/Users/geoffryroberts/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.jar:/Users/geoffryroberts/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.jar:/Users/geoffryroberts/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.jar:/Users/geoffryroberts/.m2/repository/com/sun/jersey/jersey-server/1.19/jersey-server-1.19.jar:/Users/geoffryroberts/.m2/repository/org/apache/avro/avro/1.7.7/avro-1.7.7.jar:/Users/geoffryroberts/.m2/repository/com/thoughtworks/paranamer/paranamer/2.3/paranamer-2.3.jar:/Users/geoffryroberts/.m2/repository/org/xerial/snappy/snappy-java/1.0.5/snappy-java-1.0.5.jar:/Users/geoffryroberts/.m2/repository/com/google/re2j/re2j/1.1/re2j-1.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/hadoop/hadoop-auth/3.2.0/hadoop-auth-3.2.0.jar:/Users/geoffryroberts/.m2/repository/com/nimbusds/nimbus-jose-jwt/4.41.1/nimbus-jose-jwt-4.41.1.jar:/Users/geoffryroberts/.m2/repository/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar:/Users/geoffryroberts/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar:/Users/geoffryroberts/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar:/Users/geoffryroberts/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar:/Users/geoffryroberts/.m2/repository/org/apache/curator/curator-framework/2.12.0/curator-framework-2.12.0.jar:/Users/geoffryroberts/.m2/repository/com/jcraft/jsch/0.1.54/jsch-0.1.54.jar:/Users/geoffryroberts/.m2/repository/org/apache/curator/curator-client/2.12.0/curator-client-2.12.0.jar:/Users/geoffryroberts/.m2/repository/org/apache/curator/curator-recipes/2.12.0/curator-recipes-2.12.0.jar:/Users/geoffryroberts/.m2/repository/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar:/Users/geoffryroberts/.m2/repository/org/tukaani/xz/1.0/xz-1.0.jar:/Users/geoffryroberts/.m2/repository/org/apache/kerby/kerb-simplekdc/1.0.1/kerb-simplekdc-1.0.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/kerby/kerb-client/1.0.1/kerb-client-1.0.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/kerby/kerby-config/1.0.1/kerby-config-1.0.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/kerby/kerb-core/1.0.1/kerb-core-1.0.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/kerby/kerby-pkix/1.0.1/kerby-pkix-1.0.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/kerby/kerby-asn1/1.0.1/kerby-asn1-1.0.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/kerby/kerby-util/1.0.1/kerby-util-1.0.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/kerby/kerb-common/1.0.1/kerb-common-1.0.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/kerby/kerb-crypto/1.0.1/kerb-crypto-1.0.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/kerby/kerb-util/1.0.1/kerb-util-1.0.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/kerby/token-provider/1.0.1/token-provider-1.0.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/kerby/kerb-admin/1.0.1/kerb-admin-1.0.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/kerby/kerb-server/1.0.1/kerb-server-1.0.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/kerby/kerb-identity/1.0.1/kerb-identity-1.0.1.jar:/Users/geoffryroberts/.m2/repository/org/apache/kerby/kerby-xdr/1.0.1/kerby-xdr-1.0.1.jar:/Users/geoffryroberts/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.5/jackson-databind-2.9.5.jar:/Users/geoffryroberts/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/geoffryroberts/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.5/jackson-core-2.9.5.jar:/Users/geoffryroberts/.m2/repository/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar:/Users/geoffryroberts/.m2/repository/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3.jar:/Users/geoffryroberts/.m2/repository/dnsjava/dnsjava/2.1.7/dnsjava-2.1.7.jar:/Users/geoffryroberts/.m2/repository/com/googlecode/matrix-toolkits-java/mtj/1.0.4/mtj-1.0.4.jar:/Users/geoffryroberts/.m2/repository/net/sourceforge/f2j/arpack_combined_all/0.1/arpack_combined_all-0.1.jar:/Users/geoffryroberts/.m2/repository/com/github/fommil/netlib/core/1.1.2/core-1.1.2.jar:/Users/geoffryroberts/.m2/repository/com/github/fommil/netlib/netlib-native_ref-osx-x86_64/1.1/netlib-native_ref-osx-x86_64-1.1-natives.jar:/Users/geoffryroberts/.m2/repository/com/github/fommil/netlib/native_ref-java/1.1/native_ref-java-1.1.jar:/Users/geoffryroberts/.m2/repository/com/github/fommil/jniloader/1.1/jniloader-1.1.jar:/Users/geoffryroberts/.m2/repository/com/github/fommil/netlib/netlib-native_ref-linux-x86_64/1.1/netlib-native_ref-linux-x86_64-1.1-natives.jar:/Users/geoffryroberts/.m2/repository/com/github/fommil/netlib/netlib-native_ref-linux-i686/1.1/netlib-native_ref-linux-i686-1.1-natives.jar:/Users/geoffryroberts/.m2/repository/com/github/fommil/netlib/netlib-native_ref-win-x86_64/1.1/netlib-native_ref-win-x86_64-1.1-natives.jar:/Users/geoffryroberts/.m2/repository/com/github/fommil/netlib/netlib-native_ref-win-i686/1.1/netlib-native_ref-win-i686-1.1-natives.jar:/Users/geoffryroberts/.m2/repository/com/github/fommil/netlib/netlib-native_ref-linux-armhf/1.1/netlib-native_ref-linux-armhf-1.1-natives.jar:/Users/geoffryroberts/.m2/repository/com/github/fommil/netlib/netlib-native_system-osx-x86_64/1.1/netlib-native_system-osx-x86_64-1.1-natives.jar:/Users/geoffryroberts/.m2/repository/com/github/fommil/netlib/native_system-java/1.1/native_system-java-1.1.jar:/Users/geoffryroberts/.m2/repository/com/github/fommil/netlib/netlib-native_system-linux-x86_64/1.1/netlib-native_system-linux-x86_64-1.1-natives.jar:/Users/geoffryroberts/.m2/repository/com/github/fommil/netlib/netlib-native_system-linux-i686/1.1/netlib-native_system-linux-i686-1.1-natives.jar:/Users/geoffryroberts/.m2/repository/com/github/fommil/netlib/netlib-native_system-linux-armhf/1.1/netlib-native_system-linux-armhf-1.1-natives.jar:/Users/geoffryroberts/.m2/repository/com/github/fommil/netlib/netlib-native_system-win-x86_64/1.1/netlib-native_system-win-x86_64-1.1-natives.jar:/Users/geoffryroberts/.m2/repository/com/github/fommil/netlib/netlib-native_system-win-i686/1.1/netlib-native_system-win-i686-1.1-natives.jar:/Users/geoffryroberts/.m2/repository/org/postgresql/postgresql/42.2.10/postgresql-42.2.10.jar:/Users/geoffryroberts/.m2/repository/mysql/mysql-connector-java/5.1.48/mysql-connector-java-5.1.48.jar:/Users/geoffryroberts/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/geoffryroberts/.m2/repository/org/openehealth/ipf/modules/ipf-modules-cda-mdht/3.1.1/ipf-modules-cda-mdht-3.1.1.jar:/Users/geoffryroberts/.m2/repository/org/openehealth/ipf/commons/ipf-commons-core/3.1.1/ipf-commons-core-3.1.1.jar:/Users/geoffryroberts/.m2/repository/org/codehaus/groovy/groovy/2.4.6/groovy-2.4.6.jar:/Users/geoffryroberts/.m2/repository/org/openehealth/ipf/oht/mdht/ipf-oht-mdht-uml-cda/1.2.0.201212201425/ipf-oht-mdht-uml-cda-1.2.0.201212201425.jar:/Users/geoffryroberts/.m2/repository/org/openehealth/ipf/oht/mdht/ipf-oht-mdht-uml-hl7-datatypes/1.2.0.201212201425/ipf-oht-mdht-uml-hl7-datatypes-1.2.0.201212201425.jar:/Users/geoffryroberts/.m2/repository/org/openehealth/ipf/oht/mdht/ipf-oht-mdht-uml-hl7-rim/1.2.0.201212201425/ipf-oht-mdht-uml-hl7-rim-1.2.0.201212201425.jar:/Users/geoffryroberts/.m2/repository/org/openehealth/ipf/oht/mdht/ipf-oht-mdht-uml-hl7-vocab/1.2.0.201212201425/ipf-oht-mdht-uml-hl7-vocab-1.2.0.201212201425.jar:/Users/geoffryroberts/.m2/repository/org/openehealth/ipf/oht/mdht/ipf-oht-mdht-emf-runtime/1.2.0.201212201425/ipf-oht-mdht-emf-runtime-1.2.0.201212201425.jar:/Users/geoffryroberts/.m2/repository/org/eclipse/birt/runtime/org.eclipse.emf.common/2.8.0.v20120606-0717/org.eclipse.emf.common-2.8.0.v20120606-0717.jar:/Users/geoffryroberts/.m2/repository/org/eclipse/birt/runtime/org.eclipse.emf.ecore/2.8.0.v20120606-0717/org.eclipse.emf.ecore-2.8.0.v20120606-0717.jar:/Users/geoffryroberts/.m2/repository/org/eclipse/birt/runtime/org.eclipse.emf.ecore.xmi/2.8.0.v20120606-0717/org.eclipse.emf.ecore.xmi-2.8.0.v20120606-0717.jar:/Users/geoffryroberts/.m2/repository/org/openehealth/ipf/eclipse/ocl/ipf-eclipse-ocl/3.1.0.v20110913-1213/ipf-eclipse-ocl-3.1.0.v20110913-1213.jar:/Users/geoffryroberts/.m2/repository/org/openehealth/ipf/eclipse/ocl/ipf-eclipse-ocl-ecore/3.1.1.v20110823-1646/ipf-eclipse-ocl-ecore-3.1.1.v20110823-1646.jar:/Users/geoffryroberts/.m2/repository/lpg/runtime/java/2.0.17-v201004271640/java-2.0.17-v201004271640.jar:/Users/geoffryroberts/.m2/repository/org/openehealth/ipf/oht/mdht/ipf-oht-mdht-uml-cda-ccd/1.2.0.201212201425/ipf-oht-mdht-uml-cda-ccd-1.2.0.201212201425.jar:/Users/geoffryroberts/.m2/repository/org/openehealth/ipf/oht/mdht/ipf-oht-mdht-uml-cda-hitsp/1.2.0.201212201425/ipf-oht-mdht-uml-cda-hitsp-1.2.0.201212201425.jar:/Users/geoffryroberts/.m2/repository/org/openehealth/ipf/oht/mdht/ipf-oht-mdht-uml-cda-consol/1.2.0.201212201425/ipf-oht-mdht-uml-cda-consol-1.2.0.201212201425.jar:/Users/geoffryroberts/.m2/repository/org/openehealth/ipf/oht/mdht/ipf-oht-mdht-uml-cda-ihe/1.2.0.201212201425/ipf-oht-mdht-uml-cda-ihe-1.2.0.201212201425.jar:/Users/geoffryroberts/.m2/repository/org/openehealth/ipf/oht/mdht/ipf-oht-mdht-uml-cda-cdt/1.2.0.201212201425/ipf-oht-mdht-uml-cda-cdt-1.2.0.201212201425.jar
-2021-01-01 10:23:50.612 [main] INFO  org.apache.zookeeper.ZooKeeper(100) - Client environment:java.library.path=/Users/geoffryroberts/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
-2021-01-01 10:23:50.624 [main] INFO  org.apache.zookeeper.ZooKeeper(100) - Client environment:java.io.tmpdir=/var/folders/pb/x2qlybn175bdzswvhb5g_r5r0000gn/T/
-2021-01-01 10:23:50.632 [main] INFO  org.apache.zookeeper.ZooKeeper(100) - Client environment:java.compiler=<NA>
-2021-01-01 10:23:50.639 [main] INFO  org.apache.zookeeper.ZooKeeper(100) - Client environment:os.name=Mac OS X
-2021-01-01 10:23:50.645 [main] INFO  org.apache.zookeeper.ZooKeeper(100) - Client environment:os.arch=x86_64
-2021-01-01 10:23:50.651 [main] INFO  org.apache.zookeeper.ZooKeeper(100) - Client environment:os.version=10.15.7
-2021-01-01 10:23:50.657 [main] INFO  org.apache.zookeeper.ZooKeeper(100) - Client environment:user.name=geoffryroberts
-2021-01-01 10:23:50.659 [main] INFO  org.apache.zookeeper.ZooKeeper(100) - Client environment:user.home=/Users/geoffryroberts
-2021-01-01 10:23:50.661 [main] INFO  org.apache.zookeeper.ZooKeeper(100) - Client environment:user.dir=/Users/geoffryroberts/cdcWk/cda2d4m
-2021-01-01 10:23:50.668 [main] INFO  org.apache.zookeeper.ZooKeeper(442) - Initiating client connection, connectString=localhost:2181 sessionTimeout=30000 watcher=org.apache.accumulo.fate.zookeeper.ZooSession$ZooWatcher@1698ee84
-2021-01-01 10:23:50.715 [main] DEBUG org.apache.zookeeper.ClientCnxn(118) - zookeeper.disableAutoWatchReset is false
-2021-01-01 10:23:50.896 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.SaslServerPrincipal(74) - Canonicalized address to localhost
-2021-01-01 10:23:50.900 [main-SendThread(localhost:2181)] INFO  org.apache.zookeeper.ClientCnxn(1025) - Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
-2021-01-01 10:23:50.942 [main-SendThread(localhost:2181)] INFO  org.apache.zookeeper.ClientCnxn(879) - Socket connection established to localhost/127.0.0.1:2181, initiating session
-2021-01-01 10:23:50.943 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(952) - Session establishment request sent on localhost/127.0.0.1:2181
-2021-01-01 10:23:50.986 [main-SendThread(localhost:2181)] TRACE org.apache.zookeeper.ClientCnxnSocket(125) - readConnectResult 37 0x[0,0,0,0,0,0,75,30,1,0,0,c,1a,ffffff98,0,23,0,0,0,10,2a,6b,ffffffbf,ffffffa5,ffffffbe,47,ffffffaf,21,fffffffa,ffffff9c,ffffff93,ffffffd9,ffffffe1,ffffff95,ffffff86,69,0,]
-2021-01-01 10:23:50.989 [main-SendThread(localhost:2181)] INFO  org.apache.zookeeper.ClientCnxn(1299) - Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x100000c1a980023, negotiated timeout = 30000
-2021-01-01 10:23:51.146 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 1,3  replyHeader:: 1,81797,0  request:: '/accumulo/instances/accumulo,T  response:: s{4,4,1608839419132,1608839419132,0,0,0,0,36,0,4} 
-2021-01-01 10:23:51.178 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 2,4  replyHeader:: 2,81797,0  request:: '/accumulo/instances/accumulo,T  response:: #35663662656532642d633932642d346131312d623264322d303066313064633232386339,s{4,4,1608839419132,1608839419132,0,0,0,0,36,0,4} 
-2021-01-01 10:23:51.223 [main] TRACE org.apache.accumulo.fate.zookeeper.ZooCache(421) - zookeeper contained /accumulo/instances/accumulo 5f6bee2d-c92d-4a11-b2d2-00f10dc228c9
-2021-01-01 10:23:51.245 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 3,3  replyHeader:: 3,81797,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9,T  response:: s{5,5,1608839419137,1608839419137,0,19,0,0,0,19,215} 
-2021-01-01 10:23:51.265 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 4,4  replyHeader:: 4,81797,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9,T  response:: ,s{5,5,1608839419137,1608839419137,0,19,0,0,0,19,215} 
-2021-01-01 10:23:51.266 [main] TRACE org.apache.accumulo.fate.zookeeper.ZooCache(421) - zookeeper contained /accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9 
-2021-01-01 10:23:51.325 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 5,8  replyHeader:: 5,81797,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables,T  response:: v{'+r,'!0,'+rep} 
-2021-01-01 10:23:51.452 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 6,3  replyHeader:: 6,81797,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/+r/name,T  response:: s{17,17,1608839419191,1608839419191,0,0,0,0,4,0,17} 
-2021-01-01 10:23:51.473 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 7,4  replyHeader:: 7,81797,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/+r/name,T  response:: #726f6f74,s{17,17,1608839419191,1608839419191,0,0,0,0,4,0,17} 
-2021-01-01 10:23:51.475 [main] TRACE org.apache.accumulo.fate.zookeeper.ZooCache(421) - zookeeper contained /accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/+r/name root
-2021-01-01 10:23:51.501 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 8,3  replyHeader:: 8,81797,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/+r/namespace,T  response:: s{16,16,1608839419187,1608839419187,0,0,0,0,9,0,16} 
-2021-01-01 10:23:51.522 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 9,4  replyHeader:: 9,81797,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/+r/namespace,T  response:: #2b616363756d756c6f,s{16,16,1608839419187,1608839419187,0,0,0,0,9,0,16} 
-2021-01-01 10:23:51.523 [main] TRACE org.apache.accumulo.fate.zookeeper.ZooCache(421) - zookeeper contained /accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/+r/namespace +accumulo
-2021-01-01 10:23:51.595 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 10,3  replyHeader:: 10,81797,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/namespaces/+accumulo/name,T  response:: s{12,12,1608839419164,1608839419164,0,0,0,0,8,0,12} 
-2021-01-01 10:23:51.624 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 11,4  replyHeader:: 11,81797,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/namespaces/+accumulo/name,T  response:: #616363756d756c6f,s{12,12,1608839419164,1608839419164,0,0,0,0,8,0,12} 
-2021-01-01 10:23:51.626 [main] TRACE org.apache.accumulo.fate.zookeeper.ZooCache(421) - zookeeper contained /accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/namespaces/+accumulo/name accumulo
-2021-01-01 10:23:51.699 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 12,3  replyHeader:: 12,81797,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/!0/name,T  response:: s{25,25,1608839419228,1608839419228,0,0,0,0,8,0,25} 
-2021-01-01 10:23:51.719 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 13,4  replyHeader:: 13,81797,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/!0/name,T  response:: #6d65746164617461,s{25,25,1608839419228,1608839419228,0,0,0,0,8,0,25} 
-2021-01-01 10:23:51.719 [main] TRACE org.apache.accumulo.fate.zookeeper.ZooCache(421) - zookeeper contained /accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/!0/name metadata
-2021-01-01 10:23:51.740 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 14,3  replyHeader:: 14,81797,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/!0/namespace,T  response:: s{24,24,1608839419224,1608839419224,0,0,0,0,9,0,24} 
-2021-01-01 10:23:51.759 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 15,4  replyHeader:: 15,81797,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/!0/namespace,T  response:: #2b616363756d756c6f,s{24,24,1608839419224,1608839419224,0,0,0,0,9,0,24} 
-2021-01-01 10:23:51.760 [main] TRACE org.apache.accumulo.fate.zookeeper.ZooCache(421) - zookeeper contained /accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/!0/namespace +accumulo
-2021-01-01 10:23:51.789 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 16,3  replyHeader:: 16,81797,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/+rep/name,T  response:: s{33,33,1608839419257,1608839419257,0,0,0,0,11,0,33} 
-2021-01-01 10:23:51.820 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 17,4  replyHeader:: 17,81797,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/+rep/name,T  response:: #7265706c69636174696f6e,s{33,33,1608839419257,1608839419257,0,0,0,0,11,0,33} 
-2021-01-01 10:23:51.821 [main] TRACE org.apache.accumulo.fate.zookeeper.ZooCache(421) - zookeeper contained /accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/+rep/name replication
-2021-01-01 10:23:51.848 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 18,3  replyHeader:: 18,81797,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/+rep/namespace,T  response:: s{32,32,1608839419254,1608839419254,0,0,0,0,9,0,32} 
-2021-01-01 10:23:51.869 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 19,4  replyHeader:: 19,81799,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/+rep/namespace,T  response:: #2b616363756d756c6f,s{32,32,1608839419254,1608839419254,0,0,0,0,9,0,32} 
-2021-01-01 10:23:51.870 [main] TRACE org.apache.accumulo.fate.zookeeper.ZooCache(421) - zookeeper contained /accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/tables/+rep/namespace +accumulo
-2021-01-01 10:23:51.957 [main] TRACE org.apache.accumulo.core.client.admin.TableOperations(196) - tid=1 Checked existance of false in 7.719 secs
-2021-01-01 10:23:51.958 [main] TRACE org.apache.accumulo.core.client.admin.TableOperations(188) - tid=1 Checking if table ccdT exists...
-2021-01-01 10:23:51.959 [main] TRACE org.apache.accumulo.core.client.admin.TableOperations(196) - tid=1 Checked existance of false in 0.000 secs
-2021-01-01 10:23:51.960 [main] TRACE org.apache.accumulo.core.client.admin.TableOperations(188) - tid=1 Checking if table ccdDeg exists...
-2021-01-01 10:23:51.962 [main] TRACE org.apache.accumulo.core.client.admin.TableOperations(196) - tid=1 Checked existance of false in 0.000 secs
-2021-01-01 10:23:51.963 [main] TRACE org.apache.accumulo.core.client.admin.TableOperations(188) - tid=1 Checking if table ccdDegT exists...
-2021-01-01 10:23:51.964 [main] TRACE org.apache.accumulo.core.client.admin.TableOperations(196) - tid=1 Checked existance of false in 0.000 secs
-2021-01-01 10:23:51.965 [main] TRACE org.apache.accumulo.core.client.admin.TableOperations(188) - tid=1 Checking if table ccd exists...
-2021-01-01 10:23:51.966 [main] TRACE org.apache.accumulo.core.client.admin.TableOperations(196) - tid=1 Checked existance of false in 0.000 secs
-2021-01-01 10:23:51.967 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.AccumuloComponent(83) -   Creating ccd
-2021-01-01 10:23:52.070 [main] TRACE org.apache.accumulo.core.clientImpl.ClientContext(366) - tid=1 Looking up master location in zookeeper.
-2021-01-01 10:23:52.099 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 20,8  replyHeader:: 20,81801,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/masters/lock,T  response:: v{'zlock-0000000035,'zlock-0000000034,'zlock-0000000033} 
-2021-01-01 10:23:52.123 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 21,3  replyHeader:: 21,81801,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/masters/lock/zlock-0000000033,T  response:: s{81316,81319,1609514537556,1609514537936,1,0,0,72057646023704591,10,0,81316} 
-2021-01-01 10:23:52.142 [main-SendThread(localhost:2181)] DEBUG org.apache.zookeeper.ClientCnxn(846) - Reading reply sessionid:0x100000c1a980023, packet:: clientPath:null serverPath:null finished:false header:: 22,4  replyHeader:: 22,81801,0  request:: '/accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/masters/lock/zlock-0000000033,T  response:: #68617a30303a39393939,s{81316,81319,1609514537556,1609514537936,1,0,0,72057646023704591,10,0,81316} 
-2021-01-01 10:23:52.143 [main] TRACE org.apache.accumulo.fate.zookeeper.ZooCache(421) - zookeeper contained /accumulo/5f6bee2d-c92d-4a11-b2d2-00f10dc228c9/masters/lock/zlock-0000000033 haz00:9999
-2021-01-01 10:23:52.144 [main] TRACE org.apache.accumulo.core.clientImpl.ClientContext(374) - tid=1 Found master at haz00:9999 in 0.073 secs
-2021-01-01 10:23:52.446 [main] DEBUG org.apache.accumulo.core.rpc.SaslConnectionParams(117) - Kerberos krb5 configuration not found, setting default realm to empty
-2021-01-01 10:23:52.450 [main] TRACE org.apache.accumulo.core.rpc.ThriftUtil(365) - Opening normal transport
-2021-01-01 10:23:57.497 [main] DEBUG org.apache.accumulo.core.clientImpl.MasterClient(78) - Failed to connect to master=haz00:9999, will retry... 
-org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused
-	at org.apache.thrift.transport.TSocket.open(TSocket.java:226) ~[libthrift-0.12.0.jar:0.12.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.createClientTransport(ThriftUtil.java:368) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.createNewTransport(ThriftTransportPool.java:496) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.getTransport(ThriftTransportPool.java:432) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.getTransport(ThriftTransportPool.java:410) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.getClient(ThriftUtil.java:150) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.getClientNoTimeout(ThriftUtil.java:113) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.MasterClient.getConnection(MasterClient.java:70) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.MasterClient.getConnectionWithRetry(MasterClient.java:47) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.beginFateOperation(TableOperationsImpl.java:246) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doFateOperation(TableOperationsImpl.java:352) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doFateOperation(TableOperationsImpl.java:342) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doTableFateOperation(TableOperationsImpl.java:1599) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.create(TableOperationsImpl.java:234) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.create(TableOperationsImpl.java:206) [accumulo-core-2.0.0.jar:2.0.0]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.AccumuloComponent.initAccumulo(AccumuloComponent.java:84) [classes/:?]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M.run(CDA2D4M.java:79) [classes/:?]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M.main(CDA2D4M.java:133) [classes/:?]
-Caused by: java.net.ConnectException: Connection refused
-	at sun.nio.ch.Net.connect0(Native Method) ~[?:?]
-	at sun.nio.ch.Net.connect(Net.java:493) ~[?:?]
-	at sun.nio.ch.Net.connect(Net.java:482) ~[?:?]
-	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[?:?]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339) ~[?:?]
-	at java.net.Socket.connect(Socket.java:585) ~[?:?]
-	at org.apache.thrift.transport.TSocket.open(TSocket.java:221) ~[libthrift-0.12.0.jar:0.12.0]
-	... 17 more
-2021-01-01 10:23:57.787 [main] TRACE org.apache.accumulo.core.clientImpl.ClientContext(366) - tid=1 Looking up master location in zookeeper.
-2021-01-01 10:23:57.788 [main] TRACE org.apache.accumulo.core.clientImpl.ClientContext(374) - tid=1 Found master at haz00:9999 in 0.000 secs
-2021-01-01 10:23:57.790 [main] TRACE org.apache.accumulo.core.rpc.ThriftUtil(365) - Opening normal transport
-2021-01-01 10:23:57.821 [main] DEBUG org.apache.accumulo.core.clientImpl.MasterClient(78) - Failed to connect to master=haz00:9999, will retry... 
-org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused
-	at org.apache.thrift.transport.TSocket.open(TSocket.java:226) ~[libthrift-0.12.0.jar:0.12.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.createClientTransport(ThriftUtil.java:368) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.createNewTransport(ThriftTransportPool.java:496) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.getTransport(ThriftTransportPool.java:432) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.getTransport(ThriftTransportPool.java:410) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.getClient(ThriftUtil.java:150) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.getClientNoTimeout(ThriftUtil.java:113) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.MasterClient.getConnection(MasterClient.java:70) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.MasterClient.getConnectionWithRetry(MasterClient.java:47) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.beginFateOperation(TableOperationsImpl.java:246) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doFateOperation(TableOperationsImpl.java:352) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doFateOperation(TableOperationsImpl.java:342) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doTableFateOperation(TableOperationsImpl.java:1599) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.create(TableOperationsImpl.java:234) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.create(TableOperationsImpl.java:206) [accumulo-core-2.0.0.jar:2.0.0]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.AccumuloComponent.initAccumulo(AccumuloComponent.java:84) [classes/:?]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M.run(CDA2D4M.java:79) [classes/:?]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M.main(CDA2D4M.java:133) [classes/:?]
-Caused by: java.net.ConnectException: Connection refused
-	at sun.nio.ch.Net.connect0(Native Method) ~[?:?]
-	at sun.nio.ch.Net.connect(Net.java:493) ~[?:?]
-	at sun.nio.ch.Net.connect(Net.java:482) ~[?:?]
-	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[?:?]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339) ~[?:?]
-	at java.net.Socket.connect(Socket.java:585) ~[?:?]
-	at org.apache.thrift.transport.TSocket.open(TSocket.java:221) ~[libthrift-0.12.0.jar:0.12.0]
-	... 17 more
-2021-01-01 10:23:58.080 [main] TRACE org.apache.accumulo.core.clientImpl.ClientContext(366) - tid=1 Looking up master location in zookeeper.
-2021-01-01 10:23:58.083 [main] TRACE org.apache.accumulo.core.clientImpl.ClientContext(374) - tid=1 Found master at haz00:9999 in 0.000 secs
-2021-01-01 10:23:58.084 [main] TRACE org.apache.accumulo.core.rpc.ThriftUtil(365) - Opening normal transport
-2021-01-01 10:23:58.104 [main] DEBUG org.apache.accumulo.core.clientImpl.MasterClient(78) - Failed to connect to master=haz00:9999, will retry... 
-org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused
-	at org.apache.thrift.transport.TSocket.open(TSocket.java:226) ~[libthrift-0.12.0.jar:0.12.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.createClientTransport(ThriftUtil.java:368) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.createNewTransport(ThriftTransportPool.java:496) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.getTransport(ThriftTransportPool.java:432) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.getTransport(ThriftTransportPool.java:410) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.getClient(ThriftUtil.java:150) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.getClientNoTimeout(ThriftUtil.java:113) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.MasterClient.getConnection(MasterClient.java:70) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.MasterClient.getConnectionWithRetry(MasterClient.java:47) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.beginFateOperation(TableOperationsImpl.java:246) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doFateOperation(TableOperationsImpl.java:352) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doFateOperation(TableOperationsImpl.java:342) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doTableFateOperation(TableOperationsImpl.java:1599) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.create(TableOperationsImpl.java:234) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.create(TableOperationsImpl.java:206) [accumulo-core-2.0.0.jar:2.0.0]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.AccumuloComponent.initAccumulo(AccumuloComponent.java:84) [classes/:?]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M.run(CDA2D4M.java:79) [classes/:?]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M.main(CDA2D4M.java:133) [classes/:?]
-Caused by: java.net.ConnectException: Connection refused
-	at sun.nio.ch.Net.connect0(Native Method) ~[?:?]
-	at sun.nio.ch.Net.connect(Net.java:493) ~[?:?]
-	at sun.nio.ch.Net.connect(Net.java:482) ~[?:?]
-	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[?:?]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339) ~[?:?]
-	at java.net.Socket.connect(Socket.java:585) ~[?:?]
-	at org.apache.thrift.transport.TSocket.open(TSocket.java:221) ~[libthrift-0.12.0.jar:0.12.0]
-	... 17 more
-2021-01-01 10:23:58.363 [main] TRACE org.apache.accumulo.core.clientImpl.ClientContext(366) - tid=1 Looking up master location in zookeeper.
-2021-01-01 10:23:58.365 [main] TRACE org.apache.accumulo.core.clientImpl.ClientContext(374) - tid=1 Found master at haz00:9999 in 0.000 secs
-2021-01-01 10:23:58.366 [main] TRACE org.apache.accumulo.core.rpc.ThriftUtil(365) - Opening normal transport
-2021-01-01 10:23:58.389 [main] DEBUG org.apache.accumulo.core.clientImpl.MasterClient(78) - Failed to connect to master=haz00:9999, will retry... 
-org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused
-	at org.apache.thrift.transport.TSocket.open(TSocket.java:226) ~[libthrift-0.12.0.jar:0.12.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.createClientTransport(ThriftUtil.java:368) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.createNewTransport(ThriftTransportPool.java:496) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.getTransport(ThriftTransportPool.java:432) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.getTransport(ThriftTransportPool.java:410) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.getClient(ThriftUtil.java:150) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.getClientNoTimeout(ThriftUtil.java:113) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.MasterClient.getConnection(MasterClient.java:70) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.MasterClient.getConnectionWithRetry(MasterClient.java:47) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.beginFateOperation(TableOperationsImpl.java:246) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doFateOperation(TableOperationsImpl.java:352) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doFateOperation(TableOperationsImpl.java:342) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doTableFateOperation(TableOperationsImpl.java:1599) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.create(TableOperationsImpl.java:234) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.create(TableOperationsImpl.java:206) [accumulo-core-2.0.0.jar:2.0.0]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.AccumuloComponent.initAccumulo(AccumuloComponent.java:84) [classes/:?]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M.run(CDA2D4M.java:79) [classes/:?]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M.main(CDA2D4M.java:133) [classes/:?]
-Caused by: java.net.ConnectException: Connection refused
-	at sun.nio.ch.Net.connect0(Native Method) ~[?:?]
-	at sun.nio.ch.Net.connect(Net.java:493) ~[?:?]
-	at sun.nio.ch.Net.connect(Net.java:482) ~[?:?]
-	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[?:?]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339) ~[?:?]
-	at java.net.Socket.connect(Socket.java:585) ~[?:?]
-	at org.apache.thrift.transport.TSocket.open(TSocket.java:221) ~[libthrift-0.12.0.jar:0.12.0]
-	... 17 more
-2021-01-01 10:23:58.648 [main] TRACE org.apache.accumulo.core.clientImpl.ClientContext(366) - tid=1 Looking up master location in zookeeper.
-2021-01-01 10:23:58.650 [main] TRACE org.apache.accumulo.core.clientImpl.ClientContext(374) - tid=1 Found master at haz00:9999 in 0.000 secs
-2021-01-01 10:23:58.652 [main] TRACE org.apache.accumulo.core.rpc.ThriftUtil(365) - Opening normal transport
-2021-01-01 10:23:58.675 [main] DEBUG org.apache.accumulo.core.clientImpl.MasterClient(78) - Failed to connect to master=haz00:9999, will retry... 
-org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused
-	at org.apache.thrift.transport.TSocket.open(TSocket.java:226) ~[libthrift-0.12.0.jar:0.12.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.createClientTransport(ThriftUtil.java:368) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.createNewTransport(ThriftTransportPool.java:496) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.getTransport(ThriftTransportPool.java:432) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.getTransport(ThriftTransportPool.java:410) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.getClient(ThriftUtil.java:150) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.getClientNoTimeout(ThriftUtil.java:113) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.MasterClient.getConnection(MasterClient.java:70) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.MasterClient.getConnectionWithRetry(MasterClient.java:47) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.beginFateOperation(TableOperationsImpl.java:246) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doFateOperation(TableOperationsImpl.java:352) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doFateOperation(TableOperationsImpl.java:342) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doTableFateOperation(TableOperationsImpl.java:1599) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.create(TableOperationsImpl.java:234) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.create(TableOperationsImpl.java:206) [accumulo-core-2.0.0.jar:2.0.0]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.AccumuloComponent.initAccumulo(AccumuloComponent.java:84) [classes/:?]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M.run(CDA2D4M.java:79) [classes/:?]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M.main(CDA2D4M.java:133) [classes/:?]
-Caused by: java.net.ConnectException: Connection refused
-	at sun.nio.ch.Net.connect0(Native Method) ~[?:?]
-	at sun.nio.ch.Net.connect(Net.java:493) ~[?:?]
-	at sun.nio.ch.Net.connect(Net.java:482) ~[?:?]
-	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[?:?]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339) ~[?:?]
-	at java.net.Socket.connect(Socket.java:585) ~[?:?]
-	at org.apache.thrift.transport.TSocket.open(TSocket.java:221) ~[libthrift-0.12.0.jar:0.12.0]
-	... 17 more
-2021-01-01 10:23:58.938 [main] TRACE org.apache.accumulo.core.clientImpl.ClientContext(366) - tid=1 Looking up master location in zookeeper.
-2021-01-01 10:23:58.939 [main] TRACE org.apache.accumulo.core.clientImpl.ClientContext(374) - tid=1 Found master at haz00:9999 in 0.000 secs
-2021-01-01 10:23:58.940 [main] TRACE org.apache.accumulo.core.rpc.ThriftUtil(365) - Opening normal transport
-2021-01-01 10:23:58.962 [main] DEBUG org.apache.accumulo.core.clientImpl.MasterClient(78) - Failed to connect to master=haz00:9999, will retry... 
-org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused
-	at org.apache.thrift.transport.TSocket.open(TSocket.java:226) ~[libthrift-0.12.0.jar:0.12.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.createClientTransport(ThriftUtil.java:368) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.createNewTransport(ThriftTransportPool.java:496) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.getTransport(ThriftTransportPool.java:432) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.getTransport(ThriftTransportPool.java:410) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.getClient(ThriftUtil.java:150) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.getClientNoTimeout(ThriftUtil.java:113) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.MasterClient.getConnection(MasterClient.java:70) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.MasterClient.getConnectionWithRetry(MasterClient.java:47) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.beginFateOperation(TableOperationsImpl.java:246) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doFateOperation(TableOperationsImpl.java:352) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doFateOperation(TableOperationsImpl.java:342) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doTableFateOperation(TableOperationsImpl.java:1599) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.create(TableOperationsImpl.java:234) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.create(TableOperationsImpl.java:206) [accumulo-core-2.0.0.jar:2.0.0]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.AccumuloComponent.initAccumulo(AccumuloComponent.java:84) [classes/:?]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M.run(CDA2D4M.java:79) [classes/:?]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M.main(CDA2D4M.java:133) [classes/:?]
-Caused by: java.net.ConnectException: Connection refused
-	at sun.nio.ch.Net.connect0(Native Method) ~[?:?]
-	at sun.nio.ch.Net.connect(Net.java:493) ~[?:?]
-	at sun.nio.ch.Net.connect(Net.java:482) ~[?:?]
-	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[?:?]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339) ~[?:?]
-	at java.net.Socket.connect(Socket.java:585) ~[?:?]
-	at org.apache.thrift.transport.TSocket.open(TSocket.java:221) ~[libthrift-0.12.0.jar:0.12.0]
-	... 17 more
-2021-01-01 10:23:59.222 [main] TRACE org.apache.accumulo.core.clientImpl.ClientContext(366) - tid=1 Looking up master location in zookeeper.
-2021-01-01 10:23:59.224 [main] TRACE org.apache.accumulo.core.clientImpl.ClientContext(374) - tid=1 Found master at haz00:9999 in 0.000 secs
-2021-01-01 10:23:59.225 [main] TRACE org.apache.accumulo.core.rpc.ThriftUtil(365) - Opening normal transport
-2021-01-01 10:23:59.248 [main] DEBUG org.apache.accumulo.core.clientImpl.MasterClient(78) - Failed to connect to master=haz00:9999, will retry... 
-org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused
-	at org.apache.thrift.transport.TSocket.open(TSocket.java:226) ~[libthrift-0.12.0.jar:0.12.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.createClientTransport(ThriftUtil.java:368) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.createNewTransport(ThriftTransportPool.java:496) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.getTransport(ThriftTransportPool.java:432) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.ThriftTransportPool.getTransport(ThriftTransportPool.java:410) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.getClient(ThriftUtil.java:150) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.rpc.ThriftUtil.getClientNoTimeout(ThriftUtil.java:113) ~[accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.MasterClient.getConnection(MasterClient.java:70) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.MasterClient.getConnectionWithRetry(MasterClient.java:47) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.beginFateOperation(TableOperationsImpl.java:246) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doFateOperation(TableOperationsImpl.java:352) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doFateOperation(TableOperationsImpl.java:342) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.doTableFateOperation(TableOperationsImpl.java:1599) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.create(TableOperationsImpl.java:234) [accumulo-core-2.0.0.jar:2.0.0]
-	at org.apache.accumulo.core.clientImpl.TableOperationsImpl.create(TableOperationsImpl.java:206) [accumulo-core-2.0.0.jar:2.0.0]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.AccumuloComponent.initAccumulo(AccumuloComponent.java:84) [classes/:?]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M.run(CDA2D4M.java:79) [classes/:?]
-	at gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M.main(CDA2D4M.java:133) [classes/:?]
-Caused by: java.net.ConnectException: Connection refused
-	at sun.nio.ch.Net.connect0(Native Method) ~[?:?]
-	at sun.nio.ch.Net.connect(Net.java:493) ~[?:?]
-	at sun.nio.ch.Net.connect(Net.java:482) ~[?:?]
-	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588) ~[?:?]
-	at java.net.SocksSocketImpl.connect(S
+2021-02-11 16:10:27.196 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(136) - Start==>
+2021-02-11 16:10:27.240 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(85) - file=Casimira119_Windler79_31c720b6-2a53-4a9e-8e99-8f0a85404661.xml
+2021-02-11 16:10:27.670 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(72) - ClinicalDocument==>
+2021-02-11 16:10:27.671 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20201101042907
+2021-02-11 16:10:33.234 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(129) - birthTime==>Patient.birthTime=19790513052907
+2021-02-11 16:10:33.243 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(218) - sections=11
+2021-02-11 16:10:33.244 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
+2021-02-11 16:10:33.244 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=14
+2021-02-11 16:10:33.244 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@111610e6 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.244 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20130303042907
+2021-02-11 16:10:33.245 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-1
+2021-02-11 16:10:33.245 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@4ad4936c (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.245 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20130303042907
+2021-02-11 16:10:33.245 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-2
+2021-02-11 16:10:33.246 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@29d37757 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.246 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20130310052907
+2021-02-11 16:10:33.246 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-3
+2021-02-11 16:10:33.246 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@4fcc529 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.246 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20130310052907
+2021-02-11 16:10:33.247 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-4
+2021-02-11 16:10:33.247 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@25cc7470 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.247 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20150404052907
+2021-02-11 16:10:33.247 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-5
+2021-02-11 16:10:33.247 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@4beddc56 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.248 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20170416052907
+2021-02-11 16:10:33.248 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-6
+2021-02-11 16:10:33.248 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@79b663b3 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.248 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20180427052907
+2021-02-11 16:10:33.248 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-7
+2021-02-11 16:10:33.249 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@1b812421 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.249 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20190811052907
+2021-02-11 16:10:33.249 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-8
+2021-02-11 16:10:33.249 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@5d28bcd5 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.250 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20190811052907
+2021-02-11 16:10:33.250 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-9
+2021-02-11 16:10:33.250 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@7882c44a (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.250 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20190811052907
+2021-02-11 16:10:33.250 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-10
+2021-02-11 16:10:33.250 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@32639b12 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.251 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20190811052907
+2021-02-11 16:10:33.251 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-11
+2021-02-11 16:10:33.251 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@20d11153 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.251 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20190811052907
+2021-02-11 16:10:33.251 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-12
+2021-02-11 16:10:33.252 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@3887cf88 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.252 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20191006052907
+2021-02-11 16:10:33.252 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-13
+2021-02-11 16:10:33.252 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@5649ec46 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.252 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20200919052907
+2021-02-11 16:10:33.253 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-14
+2021-02-11 16:10:33.253 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
+2021-02-11 16:10:33.253 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=10
+2021-02-11 16:10:33.253 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@78dc4696 (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.254 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-11 16:10:33.254 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@779dfe55 (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.255 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-11 16:10:33.255 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@323659f8 (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.255 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-11 16:10:33.255 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@1144a55a (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.255 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-11 16:10:33.255 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@3e521715 (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.256 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-11 16:10:33.256 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@26a529dc (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.256 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-11 16:10:33.256 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@265c5d69 (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.256 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-11 16:10:33.256 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@1286528d (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.256 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-11 16:10:33.256 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@3cc20577 (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.257 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-11 16:10:33.257 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@33a630fa (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.257 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-11 16:10:33.257 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
+2021-02-11 16:10:33.257 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=0
+2021-02-11 16:10:33.257 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
+2021-02-11 16:10:33.257 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=6
+2021-02-11 16:10:33.257 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
+2021-02-11 16:10:33.257 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=8
+2021-02-11 16:10:33.257 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
+2021-02-11 16:10:33.258 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=0
+2021-02-11 16:10:33.258 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
+2021-02-11 16:10:33.258 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=8
+2021-02-11 16:10:33.258 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
+2021-02-11 16:10:33.258 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=21
+2021-02-11 16:10:33.258 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@775594f2 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.258 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=19800706052907
+2021-02-11 16:10:33.259 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=19800706054407
+2021-02-11 16:10:33.259 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-1
+2021-02-11 16:10:33.259 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@5767b2af (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.259 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=19800718052907
+2021-02-11 16:10:33.259 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=19800718060707
+2021-02-11 16:10:33.259 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-2
+2021-02-11 16:10:33.259 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@7b22ec89 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.260 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20110410052907
+2021-02-11 16:10:33.260 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20110410054407
+2021-02-11 16:10:33.260 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-3
+2021-02-11 16:10:33.260 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@790132f7 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.260 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20130303042907
+2021-02-11 16:10:33.260 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20130303051407
+2021-02-11 16:10:33.261 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-4
+2021-02-11 16:10:33.261 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@2228db21 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.261 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20130310052907
+2021-02-11 16:10:33.261 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20130310061407
+2021-02-11 16:10:33.261 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-5
+2021-02-11 16:10:33.261 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@48b0e701 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.262 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20130407052907
+2021-02-11 16:10:33.262 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20130407054407
+2021-02-11 16:10:33.262 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-6
+2021-02-11 16:10:33.262 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@241a0c3a (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.262 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20140413052907
+2021-02-11 16:10:33.262 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20140413054407
+2021-02-11 16:10:33.262 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-7
+2021-02-11 16:10:33.263 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@547c04c4 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.263 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20150328052907
+2021-02-11 16:10:33.263 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20150328054407
+2021-02-11 16:10:33.263 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-8
+2021-02-11 16:10:33.263 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@30e92cb9 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.263 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20150404052907
+2021-02-11 16:10:33.264 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20150405072907
+2021-02-11 16:10:33.264 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-9
+2021-02-11 16:10:33.264 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@7fae4d4a (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.264 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20170416052907
+2021-02-11 16:10:33.264 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20170416055907
+2021-02-11 16:10:33.264 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-10
+2021-02-11 16:10:33.265 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@ba1f559 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.265 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20180427052907
+2021-02-11 16:10:33.265 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20180427060407
+2021-02-11 16:10:33.265 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-11
+2021-02-11 16:10:33.265 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@3f4f9acd (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.265 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20180506052907
+2021-02-11 16:10:33.265 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20180506054407
+2021-02-11 16:10:33.266 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-12
+2021-02-11 16:10:33.266 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@46baf579 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.266 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20190704052907
+2021-02-11 16:10:33.266 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20190704054407
+2021-02-11 16:10:33.266 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-13
+2021-02-11 16:10:33.266 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@4bf324f9 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.266 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20190801052907
+2021-02-11 16:10:33.266 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20190801054407
+2021-02-11 16:10:33.267 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-14
+2021-02-11 16:10:33.267 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@4f7c0be3 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.267 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20190811052907
+2021-02-11 16:10:33.267 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20190811055907
+2021-02-11 16:10:33.267 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-15
+2021-02-11 16:10:33.267 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@ca66933 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.268 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20190811052907
+2021-02-11 16:10:33.268 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20190811064507
+2021-02-11 16:10:33.268 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-16
+2021-02-11 16:10:33.268 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@1d2644e3 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.268 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20190926052907
+2021-02-11 16:10:33.268 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20190926054407
+2021-02-11 16:10:33.268 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-17
+2021-02-11 16:10:33.268 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@4fa06f52 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.269 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20191006052907
+2021-02-11 16:10:33.269 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20191006055907
+2021-02-11 16:10:33.269 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-18
+2021-02-11 16:10:33.269 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@602c4656 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.269 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20200205042907
+2021-02-11 16:10:33.269 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20200205052907
+2021-02-11 16:10:33.269 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-19
+2021-02-11 16:10:33.270 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@5ffc5491 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.270 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20200226042907
+2021-02-11 16:10:33.270 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20200226044407
+2021-02-11 16:10:33.270 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-20
+2021-02-11 16:10:33.270 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@705202d1 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
+2021-02-11 16:10:33.270 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20200919052907
+2021-02-11 16:10:33.270 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20200919055907
+2021-02-11 16:10:33.271 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-21
+2021-02-11 16:10:33.271 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
+2021-02-11 16:10:33.271 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=1
+2021-02-11 16:10:33.271 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
+2021-02-11 16:10:33.271 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=0
+2021-02-11 16:10:33.271 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
+2021-02-11 16:10:33.271 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=1
+2021-02-11 16:10:33.271 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@3c443976 (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
+2021-02-11 16:10:33.271 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-11 16:10:33.272 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(80) - <==ClinicalDocument
+2021-02-11 16:10:33.272 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(95) - cols=[id:31c720b6-2a53-4a9e-8e99-8f0a85404661, effectiveTime:20201101042907, code:252160004, codeDisplay:Standard_pregnancy_test, effectiveTime:20130303042907, code:completed, text:#procedures-desc-1, code:169230002, codeDisplay:Ultrasound_scan_for_fetal_viability, effectiveTime:20130303042907, code:completed, text:#procedures-desc-2, code:5880005, codeDisplay:Physical_examination, effectiveTime:20130310052907, code:completed, text:#procedures-desc-3, code:171207006, codeDisplay:Depression_screening, effectiveTime:20130310052907, code:completed, text:#procedures-desc-4, code:287664005, codeDisplay:Bilateral_tubal_ligation, effectiveTime:20150404052907, code:completed, text:#procedures-desc-5, code:428191000124101, codeDisplay:Documentation_of_current_medications, effectiveTime:20170416052907, code:completed, text:#procedures-desc-6, code:23426006, codeDisplay:Measurement_of_respiratory_function_(procedure), effectiveTime:20180427052907, code:completed, text:#procedures-desc-7, code:428191000124101, codeDisplay:Documentation_of_current_medications, effectiveTime:20190811052907, code:completed, text:#procedures-desc-8, code:14768001, codeDisplay:Peripheral_blood_smear_interpretation, effectiveTime:20190811052907, code:completed, text:#procedures-desc-9, code:415300000, codeDisplay:Review_of_systems_(procedure), effectiveTime:20190811052907, code:completed, text:#procedures-desc-10, code:430193006, codeDisplay:Medication_Reconciliation_(procedure), effectiveTime:20190811052907, code:completed, text:#procedures-desc-11, code:162676008, codeDisplay:Brief_general_examination_(procedure), effectiveTime:20190811052907, code:completed, text:#procedures-desc-12, code:428191000124101, codeDisplay:Documentation_of_current_medications, effectiveTime:20191006052907, code:completed, text:#procedures-desc-13, code:117015009, codeDisplay:Throat_culture_(procedure), effectiveTime:20200919052907, code:completed, text:#procedures-desc-14, effectiveTime.low:19800706052907, effectiveTime.high:19800706054407, code:185347001, codeDisplay:Encounter_for_problem, text:#encounters-desc-1, effectiveTime.low:19800718052907, effectiveTime.high:19800718060707, code:185347001, codeDisplay:Encounter_for_problem, text:#encounters-desc-2, effectiveTime.low:20110410052907, effectiveTime.high:20110410054407, code:185349003, codeDisplay:Encounter_for_check_up_(procedure), text:#encounters-desc-3, effectiveTime.low:20130303042907, effectiveTime.high:20130303051407, code:424441002, codeDisplay:Prenatal_initial_visit, text:#encounters-desc-4, effectiveTime.low:20130310052907, effectiveTime.high:20130310061407, code:424619006, codeDisplay:Prenatal_visit, text:#encounters-desc-5, effectiveTime.low:20130407052907, effectiveTime.high:20130407054407, code:698314001, codeDisplay:Consultation_for_treatment, text:#encounters-desc-6, effectiveTime.low:20140413052907, effectiveTime.high:20140413054407, code:185349003, codeDisplay:Encounter_for_check_up_(procedure), text:#encounters-desc-7, effectiveTime.low:20150328052907, effectiveTime.high:20150328054407, code:698314001, codeDisplay:Consultation_for_treatment, text:#encounters-desc-8, effectiveTime.low:20150404052907, effectiveTime.high:20150405072907, code:305408004, codeDisplay:Admission_to_surgical_department, text:#encounters-desc-9, effectiveTime.low:20170416052907, effectiveTime.high:20170416055907, code:185349003, codeDisplay:Encounter_for_check_up_(procedure), text:#encounters-desc-10, effectiveTime.low:20180427052907, effectiveTime.high:20180427060407, code:185345009, codeDisplay:Encounter_for_symptom, text:#encounters-desc-11, effectiveTime.low:20180506052907, effectiveTime.high:20180506054407, code:185349003, codeDisplay:Encounter_for_check_up_(procedure), text:#encounters-desc-12, effectiveTime.low:20190704052907, effectiveTime.high:20190704054407, code:185345009, codeDisplay:Encounter_for_symptom, text:#encounters-desc-13, effectiveTime.low:20190801052907, effectiveTime.high:20190801054407, code:185345009, codeDisplay:Encounter_for_symptom, text:#encounters-desc-14, effectiveTime.low:20190811052907, effectiveTime.high:20190811055907, code:185349003, codeDisplay:Encounter_for_check_up_(procedure), text:#encounters-desc-15, effectiveTime.low:20190811052907, effectiveTime.high:20190811064507, code:185347001, codeDisplay:Encounter_for_problem, text:#encounters-desc-16, effectiveTime.low:20190926052907, effectiveTime.high:20190926054407, code:185345009, codeDisplay:Encounter_for_symptom, text:#encounters-desc-17, effectiveTime.low:20191006052907, effectiveTime.high:20191006055907, code:185349003, codeDisplay:Encounter_for_check_up_(procedure), text:#encounters-desc-18, effectiveTime.low:20200205042907, effectiveTime.high:20200205052907, code:50849002, codeDisplay:Emergency_room_admission_(procedure), text:#encounters-desc-19, effectiveTime.low:20200226042907, effectiveTime.high:20200226044407, code:185349003, codeDisplay:Encounter_for_'check-up', text:#encounters-desc-20, effectiveTime.low:20200919052907, effectiveTime.high:20200919055907, code:185345009, codeDisplay:Encounter_for_symptom, text:#encounters-desc-21]
+2021-02-11 16:10:33.272 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(138) - <==Finish

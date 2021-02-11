@@ -50,7 +50,7 @@ public class CDA2D4M implements Runnable {
 	private String output;
 
 	AccumuloComponent acc;
-	CDA2AACols flat;
+	CDA2D4MSwitch ccdSwitch;
 
 	public CDA2D4M() {
 	}
@@ -59,37 +59,42 @@ public class CDA2D4M implements Runnable {
 		super();
 		try {
 			CLI.parseArgument(args);
-			acc = new AccumuloComponent(input, output, configFilePath, accumuloInstance, zookeeperURI, overwrite,
-					recurse);
-			flat = new CDA2AACols();
+//			acc = new AccumuloComponent(input, output, configFilePath, accumuloInstance, zookeeperURI, overwrite,
+//					recurse);
+			ccdSwitch = new CDA2D4MSwitch();
 		} catch (CmdLineException e) {
 			LOG.error("", e);
 		}
 	}
 
 	public void run() {
+
 		int cnt = 0;
-		if (fileOut) {
-			fileOut(input);
-			return;
-		}
-		if (!acc.connect()) {
-			return;
-		}
-		acc.initAccumulo();
+//		if (fileOut) {
+//			fileOut(input);
+//			return;
+//		}
+//		if (!acc.connect()) {
+//			return;
+//		}
+//		acc.initAccumulo();
 		try {
 			Set<String> files = listFiles(input, 1);
 			boolean init = true;
 			for (String file : files) {
+				LOG.trace("file=" + file);
 				Path fileIn = Paths.get(input, file);
 				InputStream is = Files.newInputStream(fileIn, StandardOpenOption.READ);
 				ClinicalDocument cda = CDAUtil.load(is);
-				List<String> cols = flat.build(cda);
+//				ContinuityOfCareDocument ccd = (ContinuityOfCareDocument) cda;
+				List<String> cols = ccdSwitch.doSwitch(cda);
 				if (init) {
 					init = false;
 				}
-				acc.doList(cols);
+//				acc.doList(cols);
+				LOG.info("cols=" + cols.toString());
 				cnt++;
+				break;
 			}
 		} catch (IOException e) {
 			LOG.error("IO==>", e);
@@ -105,13 +110,12 @@ public class CDA2D4M implements Runnable {
 			Path fileIn = Paths.get(input, oo[0].toString());
 			InputStream is = Files.newInputStream(fileIn, StandardOpenOption.READ);
 			ClinicalDocument cda = CDAUtil.load(is);
-			List<String> cols = flat.build(cda);
 			Path here = Path.of("out.txt");
 			Files.deleteIfExists(here);
 			Files.createFile(here);
-			for (String s : cols) {
-				Files.writeString(here, s + System.lineSeparator(), StandardOpenOption.APPEND);
-			}
+//			for (String s : cols) {
+//				Files.writeString(here, s + System.lineSeparator(), StandardOpenOption.APPEND);
+//			}
 		} catch (IOException e) {
 			LOG.error("IO==>", e);
 		} catch (Exception e) {

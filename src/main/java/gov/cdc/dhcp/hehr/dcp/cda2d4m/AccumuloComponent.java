@@ -50,8 +50,8 @@ public class AccumuloComponent {
 		props.put("instance.name", accumuloInstance);
 		props.put("instance.zookeepers", zookeeperURI);
 		props.put("auth.type", "password");
-		props.put("auth.principal", "gcr");
-		props.put("auth.token", "$Hello1Hello1$");
+		props.put("auth.principal", "haz");
+		props.put("auth.token", "haz");
 		conn = Accumulo.newClient().from(props).build();
 		return (conn != null);
 	}
