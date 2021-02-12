@@ -1,29 +1,189 @@
-2021-02-12 12:35:46.097 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(178) - Start==>
-2021-02-12 12:35:46.147 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(88) - xmlFileName=Casimira119_Windler79_31c720b6-2a53-4a9e-8e99-8f0a85404661.xml
-2021-02-12 12:35:53.846 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(123) - birthTime==>Patient.birthTime=19790513052907
-2021-02-12 12:35:53.859 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
-2021-02-12 12:35:53.865 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
-2021-02-12 12:35:53.867 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:35:53.867 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:35:53.867 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:35:53.868 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:35:53.868 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:35:53.868 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:35:53.868 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:35:53.868 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:35:53.869 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:35:53.869 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:35:53.869 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
-2021-02-12 12:35:53.869 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
-2021-02-12 12:35:53.869 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
-2021-02-12 12:35:53.869 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
-2021-02-12 12:35:53.870 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
-2021-02-12 12:35:53.870 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
-2021-02-12 12:35:53.874 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
-2021-02-12 12:35:53.874 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
-2021-02-12 12:35:53.874 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
-2021-02-12 12:35:53.875 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:35:53.876 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(99) - before=181
-2021-02-12 12:35:53.876 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(100) - after=132
-2021-02-12 12:35:53.876 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(101) - delta=49
-2021-02-12 12:35:53.879 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(180) - <==Finish
+2021-02-12 15:53:08.370 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(178) - Start==>
+2021-02-12 15:53:08.416 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(88) - xmlFileName=Casimira119_Windler79_31c720b6-2a53-4a9e-8e99-8f0a85404661.xml
+2021-02-12 15:53:15.609 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(137) - birthTime==>Patient.birthTime=19790513052907
+2021-02-12 15:53:15.636 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(99) - before=287
+2021-02-12 15:53:15.636 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(100) - after=182
+2021-02-12 15:53:15.636 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(101) - delta=105
+2021-02-12 15:53:15.638 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - id:31c720b6-2a53-4a9e-8e99-8f0a85404661
+2021-02-12 15:53:15.638 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - effectiveTime:20201101042907
+2021-02-12 15:53:15.638 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - code:34133-9
+2021-02-12 15:53:15.638 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - codeSystem:LOINC
+2021-02-12 15:53:15.639 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - codeDisplay:Summarization_of_episode_note
+2021-02-12 15:53:15.639 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - code:en-US
+2021-02-12 15:53:15.639 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.title:Surgeries
+2021-02-12 15:53:15.639 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.code:47519-4
+2021-02-12 15:53:15.639 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.codeSystem:LOINC
+2021-02-12 15:53:15.639 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.codeDisplay:List_of_surgeries
+2021-02-12 15:53:15.639 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.code:252160004
+2021-02-12 15:53:15.639 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.codeDisplay:Standard_pregnancy_test
+2021-02-12 15:53:15.639 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.effectiveTime:20130303042907
+2021-02-12 15:53:15.639 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.code:completed
+2021-02-12 15:53:15.640 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.text:#procedures-desc-1
+2021-02-12 15:53:15.640 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.code:169230002
+2021-02-12 15:53:15.640 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.codeDisplay:Ultrasound_scan_for_fetal_viability
+2021-02-12 15:53:15.640 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.text:#procedures-desc-2
+2021-02-12 15:53:15.640 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.code:5880005
+2021-02-12 15:53:15.640 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.codeDisplay:Physical_examination
+2021-02-12 15:53:15.640 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.effectiveTime:20130310052907
+2021-02-12 15:53:15.640 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.text:#procedures-desc-3
+2021-02-12 15:53:15.640 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.code:171207006
+2021-02-12 15:53:15.640 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.codeDisplay:Depression_screening
+2021-02-12 15:53:15.640 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.text:#procedures-desc-4
+2021-02-12 15:53:15.641 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.code:287664005
+2021-02-12 15:53:15.641 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.codeDisplay:Bilateral_tubal_ligation
+2021-02-12 15:53:15.641 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.effectiveTime:20150404052907
+2021-02-12 15:53:15.641 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.text:#procedures-desc-5
+2021-02-12 15:53:15.641 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.code:428191000124101
+2021-02-12 15:53:15.641 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.codeDisplay:Documentation_of_current_medications
+2021-02-12 15:53:15.641 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.effectiveTime:20170416052907
+2021-02-12 15:53:15.641 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.text:#procedures-desc-6
+2021-02-12 15:53:15.641 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.code:23426006
+2021-02-12 15:53:15.641 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.codeDisplay:Measurement_of_respiratory_function_(procedure)
+2021-02-12 15:53:15.641 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.effectiveTime:20180427052907
+2021-02-12 15:53:15.642 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.text:#procedures-desc-7
+2021-02-12 15:53:15.642 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.effectiveTime:20190811052907
+2021-02-12 15:53:15.642 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.text:#procedures-desc-8
+2021-02-12 15:53:15.642 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.code:14768001
+2021-02-12 15:53:15.642 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.codeDisplay:Peripheral_blood_smear_interpretation
+2021-02-12 15:53:15.642 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.text:#procedures-desc-9
+2021-02-12 15:53:15.642 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.code:415300000
+2021-02-12 15:53:15.642 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.codeDisplay:Review_of_systems_(procedure)
+2021-02-12 15:53:15.642 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.text:#procedures-desc-10
+2021-02-12 15:53:15.642 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.code:430193006
+2021-02-12 15:53:15.642 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.codeDisplay:Medication_Reconciliation_(procedure)
+2021-02-12 15:53:15.642 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.text:#procedures-desc-11
+2021-02-12 15:53:15.643 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.code:162676008
+2021-02-12 15:53:15.643 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.codeDisplay:Brief_general_examination_(procedure)
+2021-02-12 15:53:15.643 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.text:#procedures-desc-12
+2021-02-12 15:53:15.643 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.effectiveTime:20191006052907
+2021-02-12 15:53:15.643 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.text:#procedures-desc-13
+2021-02-12 15:53:15.643 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.code:117015009
+2021-02-12 15:53:15.643 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.codeDisplay:Throat_culture_(procedure)
+2021-02-12 15:53:15.643 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.effectiveTime:20200919052907
+2021-02-12 15:53:15.643 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Procedure.text:#procedures-desc-14
+2021-02-12 15:53:15.643 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.title:Problems
+2021-02-12 15:53:15.643 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.code:11450-4
+2021-02-12 15:53:15.644 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.codeDisplay:Problem_list
+2021-02-12 15:53:15.644 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Act.moodCode:EVN
+2021-02-12 15:53:15.644 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Act.Observation.code:64572001
+2021-02-12 15:53:15.644 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Act.Observation.codeSystem:SNOMED-CT
+2021-02-12 15:53:15.644 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Act.Observation.codeDisplay:Condition
+2021-02-12 15:53:15.644 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Act.Observation.code:completed
+2021-02-12 15:53:15.644 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Act.Observation.text:#conditions-desc-1
+2021-02-12 15:53:15.644 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Act.Observation.text:#conditions-desc-2
+2021-02-12 15:53:15.644 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Act.Observation.text:#conditions-desc-3
+2021-02-12 15:53:15.644 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Act.Observation.text:#conditions-desc-4
+2021-02-12 15:53:15.644 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Act.Observation.text:#conditions-desc-5
+2021-02-12 15:53:15.644 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Act.Observation.text:#conditions-desc-6
+2021-02-12 15:53:15.644 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Act.Observation.text:#conditions-desc-7
+2021-02-12 15:53:15.645 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Act.Observation.text:#conditions-desc-8
+2021-02-12 15:53:15.645 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Act.Observation.text:#conditions-desc-9
+2021-02-12 15:53:15.645 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Act.Observation.text:#conditions-desc-10
+2021-02-12 15:53:15.645 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.title:Social_History
+2021-02-12 15:53:15.645 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.code:29762-2
+2021-02-12 15:53:15.645 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.title:Medications
+2021-02-12 15:53:15.645 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.code:10160-0
+2021-02-12 15:53:15.645 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.codeDisplay:History_of_medication_use
+2021-02-12 15:53:15.645 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.title:Immunizations
+2021-02-12 15:53:15.645 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.code:11369-6
+2021-02-12 15:53:15.645 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.codeDisplay:History_of_immunizations
+2021-02-12 15:53:15.645 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.title:Imaging_Studies
+2021-02-12 15:53:15.645 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.code:18748-4
+2021-02-12 15:53:15.645 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.codeDisplay:Diagnostic_Imaging_Report
+2021-02-12 15:53:15.646 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.title:Diagnostic_Results
+2021-02-12 15:53:15.646 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.code:30954-2
+2021-02-12 15:53:15.646 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.codeDisplay:Results
+2021-02-12 15:53:15.646 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.title:Encounters
+2021-02-12 15:53:15.646 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.code:46240-8
+2021-02-12 15:53:15.646 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.codeDisplay:History_of_encounters
+2021-02-12 15:53:15.646 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:19800706052907
+2021-02-12 15:53:15.646 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:19800706054407
+2021-02-12 15:53:15.646 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.code:185347001
+2021-02-12 15:53:15.646 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.codeDisplay:Encounter_for_problem
+2021-02-12 15:53:15.646 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-1
+2021-02-12 15:53:15.646 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:19800718052907
+2021-02-12 15:53:15.646 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:19800718060707
+2021-02-12 15:53:15.646 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-2
+2021-02-12 15:53:15.647 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20110410052907
+2021-02-12 15:53:15.647 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20110410054407
+2021-02-12 15:53:15.647 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.code:185349003
+2021-02-12 15:53:15.647 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.codeDisplay:Encounter_for_check_up_(procedure)
+2021-02-12 15:53:15.647 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-3
+2021-02-12 15:53:15.647 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20130303042907
+2021-02-12 15:53:15.647 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20130303051407
+2021-02-12 15:53:15.647 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.code:424441002
+2021-02-12 15:53:15.647 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.codeDisplay:Prenatal_initial_visit
+2021-02-12 15:53:15.647 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-4
+2021-02-12 15:53:15.647 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20130310052907
+2021-02-12 15:53:15.647 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20130310061407
+2021-02-12 15:53:15.647 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.code:424619006
+2021-02-12 15:53:15.647 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.codeDisplay:Prenatal_visit
+2021-02-12 15:53:15.647 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-5
+2021-02-12 15:53:15.648 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20130407052907
+2021-02-12 15:53:15.648 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20130407054407
+2021-02-12 15:53:15.648 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.code:698314001
+2021-02-12 15:53:15.648 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.codeDisplay:Consultation_for_treatment
+2021-02-12 15:53:15.648 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-6
+2021-02-12 15:53:15.648 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20140413052907
+2021-02-12 15:53:15.648 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20140413054407
+2021-02-12 15:53:15.648 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-7
+2021-02-12 15:53:15.648 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20150328052907
+2021-02-12 15:53:15.648 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20150328054407
+2021-02-12 15:53:15.648 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-8
+2021-02-12 15:53:15.648 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20150404052907
+2021-02-12 15:53:15.648 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20150405072907
+2021-02-12 15:53:15.648 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.code:305408004
+2021-02-12 15:53:15.649 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.codeDisplay:Admission_to_surgical_department
+2021-02-12 15:53:15.649 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-9
+2021-02-12 15:53:15.649 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20170416052907
+2021-02-12 15:53:15.649 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20170416055907
+2021-02-12 15:53:15.649 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-10
+2021-02-12 15:53:15.649 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20180427052907
+2021-02-12 15:53:15.649 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20180427060407
+2021-02-12 15:53:15.649 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.code:185345009
+2021-02-12 15:53:15.649 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.codeDisplay:Encounter_for_symptom
+2021-02-12 15:53:15.649 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-11
+2021-02-12 15:53:15.649 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20180506052907
+2021-02-12 15:53:15.649 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20180506054407
+2021-02-12 15:53:15.649 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-12
+2021-02-12 15:53:15.649 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20190704052907
+2021-02-12 15:53:15.650 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20190704054407
+2021-02-12 15:53:15.650 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-13
+2021-02-12 15:53:15.650 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20190801052907
+2021-02-12 15:53:15.650 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20190801054407
+2021-02-12 15:53:15.650 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-14
+2021-02-12 15:53:15.650 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20190811052907
+2021-02-12 15:53:15.650 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20190811055907
+2021-02-12 15:53:15.650 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-15
+2021-02-12 15:53:15.650 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20190811064507
+2021-02-12 15:53:15.650 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-16
+2021-02-12 15:53:15.650 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20190926052907
+2021-02-12 15:53:15.650 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20190926054407
+2021-02-12 15:53:15.650 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-17
+2021-02-12 15:53:15.650 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20191006052907
+2021-02-12 15:53:15.650 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20191006055907
+2021-02-12 15:53:15.650 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-18
+2021-02-12 15:53:15.650 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20200205042907
+2021-02-12 15:53:15.651 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20200205052907
+2021-02-12 15:53:15.651 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.code:50849002
+2021-02-12 15:53:15.651 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.codeDisplay:Emergency_room_admission_(procedure)
+2021-02-12 15:53:15.651 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-19
+2021-02-12 15:53:15.651 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20200226042907
+2021-02-12 15:53:15.651 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20200226044407
+2021-02-12 15:53:15.651 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.codeDisplay:Encounter_for_'check-up'
+2021-02-12 15:53:15.651 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-20
+2021-02-12 15:53:15.651 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.low:20200919052907
+2021-02-12 15:53:15.651 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.effectiveTime.high:20200919055907
+2021-02-12 15:53:15.651 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Encounter.text:#encounters-desc-21
+2021-02-12 15:53:15.651 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.title:Vital_Signs
+2021-02-12 15:53:15.651 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.code:8716-3
+2021-02-12 15:53:15.651 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.codeDisplay:Vital_signs
+2021-02-12 15:53:15.651 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.title:Plan_of_Care
+2021-02-12 15:53:15.651 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.code:18776-5
+2021-02-12 15:53:15.651 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.codeDisplay:Treatment_plan
+2021-02-12 15:53:15.652 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.title:Allergies_and_Adverse_Reactions
+2021-02-12 15:53:15.652 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.code:48765-2
+2021-02-12 15:53:15.652 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.codeDisplay:Allergies
+2021-02-12 15:53:15.652 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Act.Observation.code:ASSERTION
+2021-02-12 15:53:15.652 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(110) - Section.Act.Observation.text:#allergies-desc-1
+2021-02-12 15:53:15.653 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(180) - <==Finish

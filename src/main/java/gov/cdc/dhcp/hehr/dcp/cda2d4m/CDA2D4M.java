@@ -107,7 +107,7 @@ public class CDA2D4M implements Runnable {
 				String d4mFileName = ss[0] + ".d4m";
 				BufferedWriter writer = new BufferedWriter(new FileWriter(new File(fileOut.toFile(), d4mFileName)));
 				for (String line : listWithoutDuplicates) {
-					LOG.trace(line);
+					LOG.info(line);
 					writer.append(line + System.lineSeparator());
 				}
 				writer.close();

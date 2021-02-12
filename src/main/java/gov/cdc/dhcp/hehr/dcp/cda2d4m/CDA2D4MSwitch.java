@@ -38,17 +38,29 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 		rim = new RIM2D4MSwitch();
 	}
 
+	public List<String> caseActs(EList<Act> acts) {
+		List<String> list = new ArrayList<String>();
+		for (Act act : acts) {
+			this.doSwitch(act);
+		}
+		return list;
+	}
+
 	@Override
 	public List<String> caseAct(Act act) {
 		List<String> list = new ArrayList<String>();
 		try {
+			rim.setTemp("moodCode");
 			list.addAll(rim.doSwitch(DatatypesFactory.eINSTANCE.createST(act.getMoodCode().getName())));
+			list.addAll(rim.caseIIs(act.getIds()));
+			list.addAll(rim.doSwitch(act.getCode()));
+			rim.setTemp("effectiveTime");
+			list.addAll(rim.doSwitch(act.getEffectiveTime()));
+			list.addAll(caseObservations(act.getObservations()));
 		} catch (NullPointerException e) {
 			LOG.error("Mood code name is null.");
 		}
-		rim.setTemp("effectiveTime");
-		list.addAll(rim.doSwitch(act.getEffectiveTime()));
-		return list;
+		return insertPathing(list, "Act");
 	}
 
 //	@Override
@@ -95,6 +107,8 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 			list.addAll(rim.doSwitch((encounter.getEffectiveTime().getHigh())));
 			list.addAll(rim.doSwitch((encounter.getCode())));
 			list.addAll(rim.doSwitch((encounter.getText())));
+			list.addAll(this.caseActs(encounter.getActs()));
+			list.addAll(this.caseObservations(encounter.getObservations()));
 		}
 		return insertPathing(list, "Encounter");
 	}
@@ -125,6 +139,14 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 		return insertPathing(list, "Patient");
 	}
 
+	public List<String> caseObservations(EList<Observation> observations) {
+		List<String> list = new ArrayList<String>();
+		for (Observation observation : observations) {
+			list.addAll(this.doSwitch(observation));
+		}
+		return list;
+	}
+
 	@Override
 	public List<String> caseObservation(Observation observation) {
 		List<String> list = new ArrayList<String>();
@@ -138,13 +160,6 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 		return insertPathing(list, "Observation");
 	}
 
-	public List<String> insertPathing(List<String> list, String insert) {
-		for (int i = 0; i < list.size(); i++) {
-			list.set(i, String.format("%s%s%s", insert, PATH_DELIM, list.get(i)));
-		}
-		return list;
-	}
-	
 	@Override
 	public List<String> caseProcedure(Procedure procedure) {
 		List<String> list = new ArrayList<String>();
@@ -182,16 +197,17 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 		if (section.getId() != null) {
 			list.addAll(rim.doSwitch(section.getId()));
 		}
-		if (section.getTitle() != null) {
-			try {
-				list.addAll(rim.doSwitch(section.getTitle()));
-			} catch (NullPointerException e) {
-				LOG.error("Section title is null.");
+		try {
+			if (section.getTitle() != null) {
+				list.add(String.format("title%s%s", VALUE_DELIM, fillInTheBlanks(section.getTitle().getText())));
 			}
+			list.addAll(rim.doSwitch(section.getCode()));
+		} catch (NullPointerException e) {
+			LOG.error("Section title is null.");
 		}
 		list.addAll(this.caseEntries(section.getEntries()));
-//		return insertPathing(list, "Section");
-		return list;
+		return insertPathing(list, "Section");
+//		return list;
 	}
 
 	public List<String> caseEntries(EList<Entry> entries) {
@@ -230,6 +246,13 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 		return rim.doSwitch(eObject);
 	}
 
+	public List<String> insertPathing(List<String> list, String insert) {
+		for (int i = 0; i < list.size(); i++) {
+			list.set(i, String.format("%s%s%s", insert, PATH_DELIM, list.get(i)));
+		}
+		return list;
+	}
+	
 	public String fillInTheBlanks(String s) {
 		return s.replaceAll(" ", "_");
 	}

@@ -96,9 +96,12 @@ public class RIM2D4MSwitch extends DatatypesSwitch<List<String>> implements Swit
 	}
 
 	@Override
-	public List<String> caseST(ST object) {
-		return super.caseST(object);
-	}
+	public List<String> caseST(ST st) {
+		List<String> list = new ArrayList<String>();
+		if (st != null) {
+			list.add(String.format("%s%s%s", getTemp(), VALUE_DELIM, st.getText()));
+		}
+		return list;	}
 
 	@Override
 	public List<String> caseTS(TS ts) {
