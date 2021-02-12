@@ -1,29 +1,29 @@
-2021-02-12 12:32:55.870 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(178) - Start==>
-2021-02-12 12:32:55.945 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(88) - xmlFileName=Casimira119_Windler79_31c720b6-2a53-4a9e-8e99-8f0a85404661.xml
-2021-02-12 12:33:04.704 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(122) - birthTime==>Patient.birthTime=19790513052907
-2021-02-12 12:33:04.717 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
-2021-02-12 12:33:04.726 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
-2021-02-12 12:33:04.728 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:33:04.728 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:33:04.728 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:33:04.729 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:33:04.729 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:33:04.729 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:33:04.729 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:33:04.730 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:33:04.730 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:33:04.730 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:33:04.730 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
-2021-02-12 12:33:04.730 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
-2021-02-12 12:33:04.731 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
-2021-02-12 12:33:04.731 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
-2021-02-12 12:33:04.731 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
-2021-02-12 12:33:04.731 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
-2021-02-12 12:33:04.736 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
-2021-02-12 12:33:04.736 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
-2021-02-12 12:33:04.736 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
-2021-02-12 12:33:04.737 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-12 12:33:04.738 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(99) - before=181
-2021-02-12 12:33:04.738 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(100) - after=132
-2021-02-12 12:33:04.738 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(101) - delta=49
-2021-02-12 12:33:04.741 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(180) - <==Finish
+2021-02-12 12:35:46.097 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(178) - Start==>
+2021-02-12 12:35:46.147 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(88) - xmlFileName=Casimira119_Windler79_31c720b6-2a53-4a9e-8e99-8f0a85404661.xml
+2021-02-12 12:35:53.846 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(123) - birthTime==>Patient.birthTime=19790513052907
+2021-02-12 12:35:53.859 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
+2021-02-12 12:35:53.865 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
+2021-02-12 12:35:53.867 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:35:53.867 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:35:53.867 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:35:53.868 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:35:53.868 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:35:53.868 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:35:53.868 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:35:53.868 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:35:53.869 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:35:53.869 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:35:53.869 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
+2021-02-12 12:35:53.869 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
+2021-02-12 12:35:53.869 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
+2021-02-12 12:35:53.869 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
+2021-02-12 12:35:53.870 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
+2021-02-12 12:35:53.870 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
+2021-02-12 12:35:53.874 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
+2021-02-12 12:35:53.874 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
+2021-02-12 12:35:53.874 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(189) - Section title is null.
+2021-02-12 12:35:53.875 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:35:53.876 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(99) - before=181
+2021-02-12 12:35:53.876 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(100) - after=132
+2021-02-12 12:35:53.876 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(101) - delta=49
+2021-02-12 12:35:53.879 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(180) - <==Finish
