@@ -1,179 +1,29 @@
-2021-02-11 16:10:27.196 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(136) - Start==>
-2021-02-11 16:10:27.240 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(85) - file=Casimira119_Windler79_31c720b6-2a53-4a9e-8e99-8f0a85404661.xml
-2021-02-11 16:10:27.670 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(72) - ClinicalDocument==>
-2021-02-11 16:10:27.671 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20201101042907
-2021-02-11 16:10:33.234 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(129) - birthTime==>Patient.birthTime=19790513052907
-2021-02-11 16:10:33.243 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(218) - sections=11
-2021-02-11 16:10:33.244 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
-2021-02-11 16:10:33.244 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=14
-2021-02-11 16:10:33.244 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@111610e6 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.244 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20130303042907
-2021-02-11 16:10:33.245 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-1
-2021-02-11 16:10:33.245 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@4ad4936c (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.245 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20130303042907
-2021-02-11 16:10:33.245 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-2
-2021-02-11 16:10:33.246 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@29d37757 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.246 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20130310052907
-2021-02-11 16:10:33.246 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-3
-2021-02-11 16:10:33.246 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@4fcc529 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.246 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20130310052907
-2021-02-11 16:10:33.247 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-4
-2021-02-11 16:10:33.247 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@25cc7470 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.247 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20150404052907
-2021-02-11 16:10:33.247 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-5
-2021-02-11 16:10:33.247 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@4beddc56 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.248 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20170416052907
-2021-02-11 16:10:33.248 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-6
-2021-02-11 16:10:33.248 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@79b663b3 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.248 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20180427052907
-2021-02-11 16:10:33.248 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-7
-2021-02-11 16:10:33.249 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@1b812421 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.249 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20190811052907
-2021-02-11 16:10:33.249 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-8
-2021-02-11 16:10:33.249 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@5d28bcd5 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.250 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20190811052907
-2021-02-11 16:10:33.250 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-9
-2021-02-11 16:10:33.250 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@7882c44a (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.250 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20190811052907
-2021-02-11 16:10:33.250 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-10
-2021-02-11 16:10:33.250 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@32639b12 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.251 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20190811052907
-2021-02-11 16:10:33.251 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-11
-2021-02-11 16:10:33.251 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@20d11153 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.251 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20190811052907
-2021-02-11 16:10:33.251 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-12
-2021-02-11 16:10:33.252 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@3887cf88 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.252 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20191006052907
-2021-02-11 16:10:33.252 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-13
-2021-02-11 16:10:33.252 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(267) - entry.getProcedure()=org.openhealthtools.mdht.uml.cda.impl.ProcedureImpl@5649ec46 (nullFlavor: <unset>, classCode: PROC, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.252 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(107) - effectiveTime==>effectiveTime=20200919052907
-2021-02-11 16:10:33.253 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#procedures-desc-14
-2021-02-11 16:10:33.253 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
-2021-02-11 16:10:33.253 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=10
-2021-02-11 16:10:33.253 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@78dc4696 (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.254 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-11 16:10:33.254 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@779dfe55 (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.255 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-11 16:10:33.255 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@323659f8 (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.255 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-11 16:10:33.255 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@1144a55a (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.255 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-11 16:10:33.255 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@3e521715 (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.256 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-11 16:10:33.256 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@26a529dc (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.256 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-11 16:10:33.256 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@265c5d69 (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.256 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-11 16:10:33.256 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@1286528d (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.256 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-11 16:10:33.256 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@3cc20577 (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.257 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-11 16:10:33.257 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@33a630fa (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.257 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-11 16:10:33.257 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
-2021-02-11 16:10:33.257 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=0
-2021-02-11 16:10:33.257 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
-2021-02-11 16:10:33.257 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=6
-2021-02-11 16:10:33.257 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
-2021-02-11 16:10:33.257 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=8
-2021-02-11 16:10:33.257 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
-2021-02-11 16:10:33.258 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=0
-2021-02-11 16:10:33.258 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
-2021-02-11 16:10:33.258 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=8
-2021-02-11 16:10:33.258 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
-2021-02-11 16:10:33.258 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=21
-2021-02-11 16:10:33.258 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@775594f2 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.258 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=19800706052907
-2021-02-11 16:10:33.259 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=19800706054407
-2021-02-11 16:10:33.259 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-1
-2021-02-11 16:10:33.259 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@5767b2af (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.259 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=19800718052907
-2021-02-11 16:10:33.259 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=19800718060707
-2021-02-11 16:10:33.259 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-2
-2021-02-11 16:10:33.259 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@7b22ec89 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.260 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20110410052907
-2021-02-11 16:10:33.260 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20110410054407
-2021-02-11 16:10:33.260 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-3
-2021-02-11 16:10:33.260 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@790132f7 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.260 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20130303042907
-2021-02-11 16:10:33.260 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20130303051407
-2021-02-11 16:10:33.261 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-4
-2021-02-11 16:10:33.261 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@2228db21 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.261 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20130310052907
-2021-02-11 16:10:33.261 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20130310061407
-2021-02-11 16:10:33.261 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-5
-2021-02-11 16:10:33.261 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@48b0e701 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.262 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20130407052907
-2021-02-11 16:10:33.262 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20130407054407
-2021-02-11 16:10:33.262 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-6
-2021-02-11 16:10:33.262 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@241a0c3a (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.262 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20140413052907
-2021-02-11 16:10:33.262 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20140413054407
-2021-02-11 16:10:33.262 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-7
-2021-02-11 16:10:33.263 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@547c04c4 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.263 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20150328052907
-2021-02-11 16:10:33.263 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20150328054407
-2021-02-11 16:10:33.263 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-8
-2021-02-11 16:10:33.263 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@30e92cb9 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.263 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20150404052907
-2021-02-11 16:10:33.264 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20150405072907
-2021-02-11 16:10:33.264 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-9
-2021-02-11 16:10:33.264 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@7fae4d4a (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.264 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20170416052907
-2021-02-11 16:10:33.264 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20170416055907
-2021-02-11 16:10:33.264 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-10
-2021-02-11 16:10:33.265 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@ba1f559 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.265 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20180427052907
-2021-02-11 16:10:33.265 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20180427060407
-2021-02-11 16:10:33.265 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-11
-2021-02-11 16:10:33.265 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@3f4f9acd (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.265 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20180506052907
-2021-02-11 16:10:33.265 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20180506054407
-2021-02-11 16:10:33.266 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-12
-2021-02-11 16:10:33.266 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@46baf579 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.266 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20190704052907
-2021-02-11 16:10:33.266 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20190704054407
-2021-02-11 16:10:33.266 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-13
-2021-02-11 16:10:33.266 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@4bf324f9 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.266 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20190801052907
-2021-02-11 16:10:33.266 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20190801054407
-2021-02-11 16:10:33.267 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-14
-2021-02-11 16:10:33.267 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@4f7c0be3 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.267 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20190811052907
-2021-02-11 16:10:33.267 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20190811055907
-2021-02-11 16:10:33.267 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-15
-2021-02-11 16:10:33.267 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@ca66933 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.268 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20190811052907
-2021-02-11 16:10:33.268 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20190811064507
-2021-02-11 16:10:33.268 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-16
-2021-02-11 16:10:33.268 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@1d2644e3 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.268 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20190926052907
-2021-02-11 16:10:33.268 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20190926054407
-2021-02-11 16:10:33.268 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-17
-2021-02-11 16:10:33.268 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@4fa06f52 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.269 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20191006052907
-2021-02-11 16:10:33.269 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20191006055907
-2021-02-11 16:10:33.269 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-18
-2021-02-11 16:10:33.269 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@602c4656 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.269 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20200205042907
-2021-02-11 16:10:33.269 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20200205052907
-2021-02-11 16:10:33.269 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-19
-2021-02-11 16:10:33.270 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@5ffc5491 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.270 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20200226042907
-2021-02-11 16:10:33.270 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20200226044407
-2021-02-11 16:10:33.270 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-20
-2021-02-11 16:10:33.270 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(259) - entry.getEncounter()=org.openhealthtools.mdht.uml.cda.impl.EncounterImpl@705202d1 (nullFlavor: <unset>, classCode: ENC, moodCode: EVN)
-2021-02-11 16:10:33.270 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.low=20200919052907
-2021-02-11 16:10:33.270 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(92) - effectiveTime-LH==>effectiveTime.high=20200919055907
-2021-02-11 16:10:33.271 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.RIM2D4MSwitch(65) - ed.getText()=#encounters-desc-21
-2021-02-11 16:10:33.271 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
-2021-02-11 16:10:33.271 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=1
-2021-02-11 16:10:33.271 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
-2021-02-11 16:10:33.271 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=0
-2021-02-11 16:10:33.271 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(235) - Section title is null.
-2021-02-11 16:10:33.271 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(244) - entries=1
-2021-02-11 16:10:33.271 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(255) - entry.getAct()=org.openhealthtools.mdht.uml.cda.impl.ActImpl@3c443976 (nullFlavor: <unset>, classCode: ACT, moodCode: EVN, negationInd: <unset>)
-2021-02-11 16:10:33.271 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
-2021-02-11 16:10:33.272 [main] TRACE gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(80) - <==ClinicalDocument
-2021-02-11 16:10:33.272 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(95) - cols=[id:31c720b6-2a53-4a9e-8e99-8f0a85404661, effectiveTime:20201101042907, code:252160004, codeDisplay:Standard_pregnancy_test, effectiveTime:20130303042907, code:completed, text:#procedures-desc-1, code:169230002, codeDisplay:Ultrasound_scan_for_fetal_viability, effectiveTime:20130303042907, code:completed, text:#procedures-desc-2, code:5880005, codeDisplay:Physical_examination, effectiveTime:20130310052907, code:completed, text:#procedures-desc-3, code:171207006, codeDisplay:Depression_screening, effectiveTime:20130310052907, code:completed, text:#procedures-desc-4, code:287664005, codeDisplay:Bilateral_tubal_ligation, effectiveTime:20150404052907, code:completed, text:#procedures-desc-5, code:428191000124101, codeDisplay:Documentation_of_current_medications, effectiveTime:20170416052907, code:completed, text:#procedures-desc-6, code:23426006, codeDisplay:Measurement_of_respiratory_function_(procedure), effectiveTime:20180427052907, code:completed, text:#procedures-desc-7, code:428191000124101, codeDisplay:Documentation_of_current_medications, effectiveTime:20190811052907, code:completed, text:#procedures-desc-8, code:14768001, codeDisplay:Peripheral_blood_smear_interpretation, effectiveTime:20190811052907, code:completed, text:#procedures-desc-9, code:415300000, codeDisplay:Review_of_systems_(procedure), effectiveTime:20190811052907, code:completed, text:#procedures-desc-10, code:430193006, codeDisplay:Medication_Reconciliation_(procedure), effectiveTime:20190811052907, code:completed, text:#procedures-desc-11, code:162676008, codeDisplay:Brief_general_examination_(procedure), effectiveTime:20190811052907, code:completed, text:#procedures-desc-12, code:428191000124101, codeDisplay:Documentation_of_current_medications, effectiveTime:20191006052907, code:completed, text:#procedures-desc-13, code:117015009, codeDisplay:Throat_culture_(procedure), effectiveTime:20200919052907, code:completed, text:#procedures-desc-14, effectiveTime.low:19800706052907, effectiveTime.high:19800706054407, code:185347001, codeDisplay:Encounter_for_problem, text:#encounters-desc-1, effectiveTime.low:19800718052907, effectiveTime.high:19800718060707, code:185347001, codeDisplay:Encounter_for_problem, text:#encounters-desc-2, effectiveTime.low:20110410052907, effectiveTime.high:20110410054407, code:185349003, codeDisplay:Encounter_for_check_up_(procedure), text:#encounters-desc-3, effectiveTime.low:20130303042907, effectiveTime.high:20130303051407, code:424441002, codeDisplay:Prenatal_initial_visit, text:#encounters-desc-4, effectiveTime.low:20130310052907, effectiveTime.high:20130310061407, code:424619006, codeDisplay:Prenatal_visit, text:#encounters-desc-5, effectiveTime.low:20130407052907, effectiveTime.high:20130407054407, code:698314001, codeDisplay:Consultation_for_treatment, text:#encounters-desc-6, effectiveTime.low:20140413052907, effectiveTime.high:20140413054407, code:185349003, codeDisplay:Encounter_for_check_up_(procedure), text:#encounters-desc-7, effectiveTime.low:20150328052907, effectiveTime.high:20150328054407, code:698314001, codeDisplay:Consultation_for_treatment, text:#encounters-desc-8, effectiveTime.low:20150404052907, effectiveTime.high:20150405072907, code:305408004, codeDisplay:Admission_to_surgical_department, text:#encounters-desc-9, effectiveTime.low:20170416052907, effectiveTime.high:20170416055907, code:185349003, codeDisplay:Encounter_for_check_up_(procedure), text:#encounters-desc-10, effectiveTime.low:20180427052907, effectiveTime.high:20180427060407, code:185345009, codeDisplay:Encounter_for_symptom, text:#encounters-desc-11, effectiveTime.low:20180506052907, effectiveTime.high:20180506054407, code:185349003, codeDisplay:Encounter_for_check_up_(procedure), text:#encounters-desc-12, effectiveTime.low:20190704052907, effectiveTime.high:20190704054407, code:185345009, codeDisplay:Encounter_for_symptom, text:#encounters-desc-13, effectiveTime.low:20190801052907, effectiveTime.high:20190801054407, code:185345009, codeDisplay:Encounter_for_symptom, text:#encounters-desc-14, effectiveTime.low:20190811052907, effectiveTime.high:20190811055907, code:185349003, codeDisplay:Encounter_for_check_up_(procedure), text:#encounters-desc-15, effectiveTime.low:20190811052907, effectiveTime.high:20190811064507, code:185347001, codeDisplay:Encounter_for_problem, text:#encounters-desc-16, effectiveTime.low:20190926052907, effectiveTime.high:20190926054407, code:185345009, codeDisplay:Encounter_for_symptom, text:#encounters-desc-17, effectiveTime.low:20191006052907, effectiveTime.high:20191006055907, code:185349003, codeDisplay:Encounter_for_check_up_(procedure), text:#encounters-desc-18, effectiveTime.low:20200205042907, effectiveTime.high:20200205052907, code:50849002, codeDisplay:Emergency_room_admission_(procedure), text:#encounters-desc-19, effectiveTime.low:20200226042907, effectiveTime.high:20200226044407, code:185349003, codeDisplay:Encounter_for_'check-up', text:#encounters-desc-20, effectiveTime.low:20200919052907, effectiveTime.high:20200919055907, code:185345009, codeDisplay:Encounter_for_symptom, text:#encounters-desc-21]
-2021-02-11 16:10:33.272 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(138) - <==Finish
+2021-02-12 12:32:55.870 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(178) - Start==>
+2021-02-12 12:32:55.945 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(88) - xmlFileName=Casimira119_Windler79_31c720b6-2a53-4a9e-8e99-8f0a85404661.xml
+2021-02-12 12:33:04.704 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(122) - birthTime==>Patient.birthTime=19790513052907
+2021-02-12 12:33:04.717 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
+2021-02-12 12:33:04.726 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
+2021-02-12 12:33:04.728 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:33:04.728 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:33:04.728 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:33:04.729 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:33:04.729 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:33:04.729 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:33:04.729 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:33:04.730 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:33:04.730 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:33:04.730 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:33:04.730 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
+2021-02-12 12:33:04.730 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
+2021-02-12 12:33:04.731 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
+2021-02-12 12:33:04.731 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
+2021-02-12 12:33:04.731 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
+2021-02-12 12:33:04.731 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
+2021-02-12 12:33:04.736 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
+2021-02-12 12:33:04.736 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
+2021-02-12 12:33:04.736 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(188) - Section title is null.
+2021-02-12 12:33:04.737 [main] ERROR gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4MSwitch(47) - Mood code name is null.
+2021-02-12 12:33:04.738 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(99) - before=181
+2021-02-12 12:33:04.738 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(100) - after=132
+2021-02-12 12:33:04.738 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(101) - delta=49
+2021-02-12 12:33:04.741 [main] INFO  gov.cdc.dhcp.hehr.dcp.cda2d4m.CDA2D4M(180) - <==Finish

@@ -14,7 +14,7 @@
 <!-- 	    <Logger name="gov.cdc.dhcp.hehr.dcp.cda2d4m" >  
 	        <level value="DEBUG" />
  	   </Logger> -->
-		<Root level="TRACE">
+		<Root level="INFO">
 			<AppenderRef ref="Console" />
  			<AppenderRef ref="File"/>
 		</Root>

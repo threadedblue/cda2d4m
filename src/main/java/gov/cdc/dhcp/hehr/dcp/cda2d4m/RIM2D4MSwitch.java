@@ -63,7 +63,7 @@ public class RIM2D4MSwitch extends DatatypesSwitch<List<String>> implements Swit
 		List<String> list = new ArrayList<String>();
 		if (ed != null) {
 			LOG.trace("ed.getText()=" + ed.getReference().getValue());
-			list.add(String.format("text%s%s", Switch.VALUE_DELIM, ed.getReference().getValue()));
+			list.add(String.format("text%s%s", VALUE_DELIM, ed.getReference().getValue()));
 		}
 		return list;
 	}

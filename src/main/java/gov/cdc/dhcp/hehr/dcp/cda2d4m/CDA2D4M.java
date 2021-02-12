@@ -1,5 +1,8 @@
 package gov.cdc.dhcp.hehr.dcp.cda2d4m;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -81,18 +84,33 @@ public class CDA2D4M implements Runnable {
 		try {
 			Set<String> files = listFiles(input, 1);
 			boolean init = true;
-			for (String file : files) {
-				LOG.trace("file=" + file);
-				Path fileIn = Paths.get(input, file);
+			for (String xmlFileName : files) {
+				LOG.info("xmlFileName=" + xmlFileName);
+				Path fileIn = Paths.get(input, xmlFileName);
 				InputStream is = Files.newInputStream(fileIn, StandardOpenOption.READ);
 				ClinicalDocument cda = CDAUtil.load(is);
-//				ContinuityOfCareDocument ccd = (ContinuityOfCareDocument) cda;
-				List<String> cols = ccdSwitch.doSwitch(cda);
+				List<String> listWithDuplicates = ccdSwitch.doSwitch(cda);
+			    List<String> listWithoutDuplicates = listWithDuplicates.stream()
+			    	     .distinct()
+			    	     .collect(Collectors.toList());
 				if (init) {
 					init = false;
 				}
+				LOG.info("before=" + listWithDuplicates.size());
+				LOG.info("after=" + listWithoutDuplicates.size());
+				LOG.info("delta=" + (listWithDuplicates.size() - listWithoutDuplicates.size()));
 //				acc.doList(cols);
-				LOG.info("cols=" + cols.toString());
+				Path fileOut = Paths.get(input, "d4m");
+				Files.createDirectories(Paths.get(fileOut.toUri()));
+				
+				String[] ss = xmlFileName.split("\\.");
+				String d4mFileName = ss[0] + ".d4m";
+				BufferedWriter writer = new BufferedWriter(new FileWriter(new File(fileOut.toFile(), d4mFileName)));
+				for (String line : listWithoutDuplicates) {
+					LOG.trace(line);
+					writer.append(line + System.lineSeparator());
+				}
+				writer.close();
 				cnt++;
 				break;
 			}
@@ -102,6 +120,30 @@ public class CDA2D4M implements Runnable {
 			LOG.error("Ex==>", e);
 		}
 	}
+	
+//	List<String> doIndexing(List<String> list) {
+//		final int KEY = 0;
+//		final int VALUE = 1;
+//		String insert = null;
+//		String prev = list.get(0).split(Switch.VALUE_DELIM)[KEY];
+//		String curr = null;
+//		int k = 1;
+//		for (int i = 1; i < list.size(); i++) {
+//			String s = list.get(i);
+//			String[] ss = s.split(Switch.VALUE_DELIM);
+//			curr = ss[KEY];
+//			if (prev.equals(curr)) {
+//				insert = String.format("%s[%02d]%s%s", prev, k, Switch.VALUE_DELIM, ss[VALUE]);	
+//				k++;
+//			} else {
+//				insert = String.format("%s%s%s", prev, Switch.VALUE_DELIM, ss[VALUE]);
+//				k = 1;
+//			}
+//			list.set(i - 1, insert);
+//			prev = curr;
+//		}
+//		return list;
+//	}
 
 	public void fileOut(String file) {
 		try {
