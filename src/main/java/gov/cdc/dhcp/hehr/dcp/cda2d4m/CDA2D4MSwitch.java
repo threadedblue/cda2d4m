@@ -83,6 +83,8 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 		List<String> list = new ArrayList<String>();
 		LOG.trace("ClinicalDocument==>");
 		list.addAll(rim.doSwitch(cda.getId()));
+		rim.setTemp("title");
+		list.addAll(rim.doSwitch(cda.getTitle()));
 		rim.setTemp("effectiveTime");
 		list.addAll(rim.doSwitch(cda.getEffectiveTime()));
 		list.addAll(rim.doSwitch(cda.getCode()));
@@ -90,7 +92,6 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 		list.addAll(this.casePatientRoles(cda.getPatientRoles()));
 		list.addAll(this.caseSections(cda.getSections()));
 		LOG.trace("<==ClinicalDocument");
-//		return insertPathing(list, "ClinicalDocument");
 		return list;
 	}
 
@@ -115,17 +116,12 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 
 	public List<String> casePatientRoles(EList<PatientRole> roles) {
 		List<String> list = new ArrayList<String>();
+		LOG.trace("roles=" + roles.size());
 		for (PatientRole role : roles) {
-			this.doSwitch(role);
+			list.addAll(this.doSwitch(role));
 		}
 		return list;
 	}
-
-//	@Override
-//	public List<String> caseParticipantRole(ParticipantRole object) {
-//		// TODO Auto-generated method stub
-//		return super.caseParticipantRole(object);
-//	}
 
 	public List<String> casePatient(Patient patient) {
 		List<String> list = new ArrayList<String>();
@@ -173,11 +169,11 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 		return insertPathing(list, "Procedure");
 	}
 
-	public List<String> casePatientRole(PatientRole object) {
+	public List<String> casePatientRole(PatientRole role) {
 		List<String> list = new ArrayList<String>();
-		if (object != null) {
-			list.addAll(this.doSwitch((object).getPatient()));
-//			list.addAll(rim.doSwitch(object.getAddrs().get(0)));
+		LOG.trace("role=" + role);
+		if (role != null) {
+			list.addAll(this.doSwitch((role).getPatient()));
 		}
 		return insertPathing(list, "PatientRole");
 	}
@@ -207,7 +203,6 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 		}
 		list.addAll(this.caseEntries(section.getEntries()));
 		return insertPathing(list, "Section");
-//		return list;
 	}
 
 	public List<String> caseEntries(EList<Entry> entries) {
@@ -238,7 +233,6 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 			LOG.trace("entry.getProcedure()=" + entry.getProcedure());
 			list.addAll(this.doSwitch(entry.getProcedure()));
 		}
-//		return insertPathing(list, "Entry");
 		return list;
 	}
 
