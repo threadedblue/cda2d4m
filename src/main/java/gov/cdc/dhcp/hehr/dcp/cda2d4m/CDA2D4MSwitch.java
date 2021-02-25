@@ -1,7 +1,6 @@
 package gov.cdc.dhcp.hehr.dcp.cda2d4m;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
@@ -11,15 +10,12 @@ import org.openhealthtools.mdht.uml.cda.ClinicalDocument;
 import org.openhealthtools.mdht.uml.cda.Encounter;
 import org.openhealthtools.mdht.uml.cda.Entry;
 import org.openhealthtools.mdht.uml.cda.Observation;
-import org.openhealthtools.mdht.uml.cda.ParticipantRole;
+import org.openhealthtools.mdht.uml.cda.Organizer;
 import org.openhealthtools.mdht.uml.cda.Patient;
 import org.openhealthtools.mdht.uml.cda.PatientRole;
 import org.openhealthtools.mdht.uml.cda.Procedure;
 import org.openhealthtools.mdht.uml.cda.Section;
-import org.openhealthtools.mdht.uml.cda.ccd.ImmunizationsSection;
-import org.openhealthtools.mdht.uml.cda.ccd.MedicationActivity;
-import org.openhealthtools.mdht.uml.cda.ccd.ProblemAct;
-import org.openhealthtools.mdht.uml.cda.ccd.ProblemSection;
+import org.openhealthtools.mdht.uml.cda.SubstanceAdministration;
 import org.openhealthtools.mdht.uml.cda.util.CDASwitch;
 import org.openhealthtools.mdht.uml.hl7.datatypes.DatatypesFactory;
 import org.slf4j.Logger;
@@ -95,6 +91,14 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 		return list;
 	}
 
+	public List<String> caseEncounters(EList<Encounter> encounters) {
+		List<String> list = new ArrayList<String>();
+		for (Encounter encounter : encounters) {
+			list.addAll(this.doSwitch(encounter));
+		}
+		return list;
+	}
+	
 	@Override
 	public List<String> caseEncounter(Encounter encounter) {
 		List<String> list = new ArrayList<String>();
@@ -114,6 +118,45 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 		return insertPathing(list, "Encounter");
 	}
 
+	public List<String> caseEntries(EList<Entry> entries) {
+		List<String> list = new ArrayList<String>();
+		LOG.trace("entries=" + entries.size());
+		for (Entry entry : entries) {
+			list.addAll(this.doSwitch(entry));
+		}
+		return list;
+	}
+
+	@Override
+	public List<String> caseEntry(Entry entry) {
+		List<String> list = new ArrayList<String>();
+		if (entry.getAct() != null) {
+			LOG.trace("entry.getAct()=" + entry.getAct());
+			list.addAll(this.doSwitch(entry.getAct()));
+		}
+		if (entry.getEncounter() != null) {
+			LOG.trace("entry.getEncounter()=" + entry.getEncounter());
+			list.addAll(this.doSwitch(entry.getEncounter()));
+		}
+		if (entry.getObservation() != null) {
+			LOG.trace("entry.getObservation()=" + entry.getObservation());
+			list.addAll(this.doSwitch(entry.getObservation()));
+		}
+		if (entry.getOrganizer() != null) {
+			LOG.trace("entry.getOrganizer()=" + entry.getOrganizer());
+			list.addAll(this.doSwitch(entry.getOrganizer()));
+		}
+		if (entry.getProcedure() != null) {
+			LOG.trace("entry.getProcedure()=" + entry.getProcedure());
+			list.addAll(this.doSwitch(entry.getProcedure()));
+		}
+		if (entry.getSubstanceAdministration() != null) {
+			LOG.trace("entry.getSubstanceAdministration()=" + entry.getSubstanceAdministration());
+			list.addAll(this.doSwitch(entry.getSubstanceAdministration()));
+		}
+		return list;
+	}
+
 	public List<String> casePatientRoles(EList<PatientRole> roles) {
 		List<String> list = new ArrayList<String>();
 		LOG.trace("roles=" + roles.size());
@@ -121,18 +164,6 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 			list.addAll(this.doSwitch(role));
 		}
 		return list;
-	}
-
-	public List<String> casePatient(Patient patient) {
-		List<String> list = new ArrayList<String>();
-		if (patient != null) {
-			list.add(String.format("%s%s%s", "Patient.RaceCode", VALUE_DELIM, patient.getRaceCode().getDisplayName()));
-			list.add(String.format("%s%s%s", "Patient.AdministrativeGenderCode", VALUE_DELIM,
-					patient.getAdministrativeGenderCode().getCode()));
-			list.add(String.format("%s%s%s", "Patient.birthTime", VALUE_DELIM, patient.getBirthTime().getValue()));
-			LOG.info("birthTime==>" + "Patient.birthTime" + "=" + patient.getBirthTime().getValue());
-		}
-		return insertPathing(list, "Patient");
 	}
 
 	public List<String> caseObservations(EList<Observation> observations) {
@@ -154,6 +185,30 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 			list.addAll(rim.doSwitch(observation.getText()));
 		}
 		return insertPathing(list, "Observation");
+	}
+
+	@Override
+	public List<String> caseOrganizer(Organizer organizer) {
+		List<String> list = new ArrayList<String>();
+		if (organizer != null) {
+			list.addAll(rim.doSwitch(organizer.getCode()));
+			list.addAll(rim.doSwitch(organizer.getEffectiveTime()));
+			list.addAll(caseEncounters(organizer.getEncounters()));
+			list.addAll(caseObservations(organizer.getObservations()));
+		}
+		return insertPathing(list, "Organizer");
+	}
+
+	public List<String> casePatient(Patient patient) {
+		List<String> list = new ArrayList<String>();
+		if (patient != null) {
+			list.add(String.format("%s%s%s", "Patient.RaceCode", VALUE_DELIM, patient.getRaceCode().getDisplayName()));
+			list.add(String.format("%s%s%s", "Patient.AdministrativeGenderCode", VALUE_DELIM,
+					patient.getAdministrativeGenderCode().getCode()));
+			list.add(String.format("%s%s%s", "Patient.birthTime", VALUE_DELIM, patient.getBirthTime().getValue()));
+			LOG.info("birthTime==>" + "Patient.birthTime" + "=" + patient.getBirthTime().getValue());
+		}
+		return insertPathing(list, "Patient");
 	}
 
 	@Override
@@ -205,39 +260,33 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 		return insertPathing(list, "Section");
 	}
 
-	public List<String> caseEntries(EList<Entry> entries) {
-		List<String> list = new ArrayList<String>();
-		LOG.trace("entries=" + entries.size());
-		for (Entry entry : entries) {
-			list.addAll(this.doSwitch(entry));
-		}
-		return list;
-	}
-
 	@Override
-	public List<String> caseEntry(Entry entry) {
+	public List<String> caseSubstanceAdministration(SubstanceAdministration substanceAdministration) {
 		List<String> list = new ArrayList<String>();
-		if (entry.getAct() != null) {
-			LOG.trace("entry.getAct()=" + entry.getAct());
-			list.addAll(this.doSwitch(entry.getAct()));
+		LOG.trace("substanceAdministration=" + substanceAdministration);
+		if (substanceAdministration != null) {
+			list.addAll(checkFirst((substanceAdministration.getAdministrationUnitCode())));
+			list.addAll(checkFirst((substanceAdministration.getCode())));
+			rim.setTemp("effectiveTime");
+			list.addAll(rim.caseSXCM_TSs(substanceAdministration.getEffectiveTimes()));
+			list.addAll(checkFirst(substanceAdministration.getPriorityCode()));
+			list.addAll(checkFirst(substanceAdministration.getRouteCode()));
+			list.addAll(checkFirst(substanceAdministration.getStatusCode()));
+			list.addAll(checkFirst(substanceAdministration.getText()));
 		}
-		if (entry.getEncounter() != null) {
-			LOG.trace("entry.getEncounter()=" + entry.getEncounter());
-			list.addAll(this.doSwitch(entry.getEncounter()));
-		}
-		if (entry.getObservation() != null) {
-			LOG.trace("entry.getObservation()=" + entry.getObservation());
-			list.addAll(this.doSwitch(entry.getObservation()));
-		}
-		if (entry.getProcedure() != null) {
-			LOG.trace("entry.getProcedure()=" + entry.getProcedure());
-			list.addAll(this.doSwitch(entry.getProcedure()));
-		}
-		return list;
+		return insertPathing(list, "SubstanceAdministration");
 	}
 
 	public List<String> defaultCase(EObject eObject) {
 		return rim.doSwitch(eObject);
+	}
+
+	public List<String> checkFirst(EObject eObject) {
+		List<String> list = new ArrayList<String>();
+		if (eObject != null) {
+			list.addAll(rim.doSwitch(eObject));
+		}
+		return list;
 	}
 
 	public List<String> insertPathing(List<String> list, String insert) {
@@ -246,7 +295,7 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 		}
 		return list;
 	}
-	
+
 	public String fillInTheBlanks(String s) {
 		return s.replaceAll(" ", "_");
 	}

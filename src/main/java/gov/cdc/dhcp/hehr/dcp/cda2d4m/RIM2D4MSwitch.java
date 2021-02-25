@@ -2,16 +2,17 @@ package gov.cdc.dhcp.hehr.dcp.cda2d4m;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.util.EList;
 import org.openhealthtools.mdht.uml.cda.Act;
 import org.openhealthtools.mdht.uml.hl7.datatypes.CD;
+import org.openhealthtools.mdht.uml.hl7.datatypes.CE;
 import org.openhealthtools.mdht.uml.hl7.datatypes.CS;
 import org.openhealthtools.mdht.uml.hl7.datatypes.ED;
 import org.openhealthtools.mdht.uml.hl7.datatypes.II;
 import org.openhealthtools.mdht.uml.hl7.datatypes.IVXB_TS;
 import org.openhealthtools.mdht.uml.hl7.datatypes.ST;
+import org.openhealthtools.mdht.uml.hl7.datatypes.SXCM_TS;
 import org.openhealthtools.mdht.uml.hl7.datatypes.TS;
 import org.openhealthtools.mdht.uml.hl7.datatypes.util.DatatypesSwitch;
 import org.slf4j.Logger;
@@ -32,6 +33,15 @@ public class RIM2D4MSwitch extends DatatypesSwitch<List<String>> implements Swit
 		return list;
 	}
 	
+	@Override
+	public List<String> caseCE(CE ce) {
+		List<String> list = new ArrayList<String>();
+		if (ce != null) {
+			list.addAll(caseCD((CD)ce));
+		}
+		return list;
+	}
+
 	public List<String> checkFirst(CD cd) {
 
 		List<String> list = new ArrayList<String>();
@@ -103,6 +113,25 @@ public class RIM2D4MSwitch extends DatatypesSwitch<List<String>> implements Swit
 		}
 		return list;	}
 
+	public List<String> caseSXCM_TSs(EList<SXCM_TS> tss) {
+		List<String> list = new ArrayList<String>();
+		LOG.trace("SXCM_TS=" + tss.size());
+		for (SXCM_TS ts : tss) {
+			list.addAll(this.doSwitch(ts));
+		}
+		return list;
+	}
+	
+	@Override
+	public List<String> caseSXCM_TS(SXCM_TS ts) {
+		List<String> list = new ArrayList<String>();
+		if (ts.getValue() != null) {
+			LOG.trace("effectiveTime==>" + getTemp() + "=" + ts.getValue());
+			list.add(String.format("%s%s%s", getTemp(), VALUE_DELIM, ts.getValue()));
+		}
+		return list;
+	}
+
 	@Override
 	public List<String> caseTS(TS ts) {
 		List<String> list = new ArrayList<String>();
@@ -112,7 +141,7 @@ public class RIM2D4MSwitch extends DatatypesSwitch<List<String>> implements Swit
 		}
 		return list;
 	}
-
+	
 	public String getTemp() {
 		// Can't tell if we need this or not.
 //		if (temp == null) {

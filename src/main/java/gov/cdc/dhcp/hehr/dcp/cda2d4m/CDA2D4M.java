@@ -62,8 +62,8 @@ public class CDA2D4M implements Runnable {
 		super();
 		try {
 			CLI.parseArgument(args);
-//			acc = new AccumuloComponent(input, output, configFilePath, accumuloInstance, zookeeperURI, overwrite,
-//					recurse);
+			acc = new AccumuloComponent(input, output, configFilePath, accumuloInstance, zookeeperURI, overwrite,
+					recurse);
 			ccdSwitch = new CDA2D4MSwitch();
 		} catch (CmdLineException e) {
 			LOG.error("", e);
@@ -73,14 +73,14 @@ public class CDA2D4M implements Runnable {
 	public void run() {
 
 		int cnt = 0;
-//		if (fileOut) {
-//			fileOut(input);
-//			return;
-//		}
-//		if (!acc.connect()) {
-//			return;
-//		}
-//		acc.initAccumulo();
+		if (fileOut) {
+			fileOut(input);
+			return;
+		}
+		if (!acc.connect()) {
+			return;
+		}
+		acc.initAccumulo();
 		try {
 			Set<String> files = listFiles(input, 1);
 			boolean init = true;
@@ -99,7 +99,7 @@ public class CDA2D4M implements Runnable {
 				LOG.info("before=" + listWithDuplicates.size());
 				LOG.info("after=" + listWithoutDuplicates.size());
 				LOG.info("delta=" + (listWithDuplicates.size() - listWithoutDuplicates.size()));
-//				acc.doList(cols);
+				acc.doList(listWithoutDuplicates);
 				Path fileOut = Paths.get(input, "d4m");
 				Files.createDirectories(Paths.get(fileOut.toUri()));
 				
@@ -112,7 +112,7 @@ public class CDA2D4M implements Runnable {
 				}
 				writer.close();
 				cnt++;
-				break;
+//				break;
 			}
 		} catch (IOException e) {
 			LOG.error("IO==>", e);
