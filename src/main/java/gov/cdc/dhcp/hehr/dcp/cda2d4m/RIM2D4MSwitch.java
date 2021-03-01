@@ -124,12 +124,12 @@ public class RIM2D4MSwitch extends DatatypesSwitch<List<String>> implements Swit
 	
 	@Override
 	public List<String> caseSXCM_TS(SXCM_TS ts) {
-		List<String> list = new ArrayList<String>();
-		if (ts.getValue() != null) {
-			LOG.trace("effectiveTime==>" + getTemp() + "=" + ts.getValue());
-			list.add(String.format("%s%s%s", getTemp(), VALUE_DELIM, ts.getValue()));
-		}
-		return list;
+//		List<String> list = new ArrayList<String>();
+//		if (ts.getValue() != null) {
+//			LOG.trace("effectiveTime==>" + getTemp() + "=" + ts.getValue());
+//			list.add(String.format("%s%s%s", getTemp(), VALUE_DELIM, ts.getValue().substring(0, 8)));
+//		}
+		return caseTS(ts);
 	}
 
 	@Override
@@ -137,7 +137,7 @@ public class RIM2D4MSwitch extends DatatypesSwitch<List<String>> implements Swit
 		List<String> list = new ArrayList<String>();
 		if (ts.getValue() != null) {
 			LOG.trace("effectiveTime==>" + getTemp() + "=" + ts.getValue());
-			list.add(String.format("%s%s%s", getTemp(), VALUE_DELIM, ts.getValue()));
+			list.add(String.format("%s%s%s", getTemp(), VALUE_DELIM, ts.getValue().substring(0, 8)));
 		}
 		return list;
 	}
