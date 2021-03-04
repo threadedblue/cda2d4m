@@ -1,6 +1,12 @@
 package gov.cdc.dhcp.hehr.dcp.cda2d4m;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.temporal.ChronoUnit;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
@@ -29,6 +35,10 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 
 	ElementFormatter formatter;
 
+	String docEffectiveTime;
+	
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyymmdd");
+	
 	public CDA2D4MSwitch() {
 		super();
 		rim = new RIM2D4MSwitch();
@@ -82,7 +92,9 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 		rim.setTemp("title");
 		list.addAll(rim.doSwitch(cda.getTitle()));
 		rim.setTemp("effectiveTime");
-		list.addAll(rim.doSwitch(cda.getEffectiveTime()));
+		List<String> effectiveTimeList = rim.doSwitch(cda.getEffectiveTime());
+		this.docEffectiveTime = effectiveTimeList.get(0);
+		list.addAll(effectiveTimeList);
 		list.addAll(rim.doSwitch(cda.getCode()));
 		list.addAll(rim.doSwitch(cda.getLanguageCode()));
 		list.addAll(this.casePatientRoles(cda.getPatientRoles()));
@@ -196,7 +208,7 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 			list.addAll(caseEncounters(organizer.getEncounters()));
 			list.addAll(caseObservations(organizer.getObservations()));
 		}
-		return insertPathing(list, "Organizer");
+		return list;
 	}
 
 	public List<String> casePatient(Patient patient) {
@@ -205,7 +217,10 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 			list.add(String.format("%s%s%s", "Patient.RaceCode", VALUE_DELIM, patient.getRaceCode().getDisplayName()));
 			list.add(String.format("%s%s%s", "Patient.AdministrativeGenderCode", VALUE_DELIM,
 					patient.getAdministrativeGenderCode().getCode()));
-			list.add(String.format("%s%s%s", "Patient.birthTime", VALUE_DELIM, patient.getBirthTime().getValue()));
+			rim.setTemp("birthTime");
+			List<String> patientBirthTimeList = rim.doSwitch(patient.getBirthTime());
+			list.add(String.format("%s%s%s", "Patient.age", VALUE_DELIM, calculateAge(patientBirthTimeList.get(0), docEffectiveTime)));
+			list.addAll(patientBirthTimeList);
 			LOG.info("birthTime==>" + "Patient.birthTime" + "=" + patient.getBirthTime().getValue());
 		}
 		return insertPathing(list, "Patient");
@@ -281,6 +296,17 @@ public class CDA2D4MSwitch extends CDASwitch<List<String>> implements Switch {
 		return rim.doSwitch(eObject);
 	}
 
+	public String calculateAge(String birthTime, String effectiveTime) {
+	    return Long.toString(ChronoUnit.YEARS.between(parseDate(birthTime), parseDate(effectiveTime)));
+	}
+	
+	public LocalDate parseDate(String time) {
+		int y = Integer.parseInt(time.substring(0, 4));
+		int m = Integer.parseInt(time.substring(4, 6));
+		int d = Integer.parseInt(time.substring(6, 8));
+		return LocalDate.of(y, m, d);
+	}
+	
 	public List<String> checkFirst(EObject eObject) {
 		List<String> list = new ArrayList<String>();
 		if (eObject != null) {
