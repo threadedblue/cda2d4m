@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin
+      name="%pluginName"
+      id="emfjson-jackson"
+      version="1.0.0"
+      provider-name="%providerName">
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.emf.ecore" export="true"/>
+      <import plugin="org.eclipse.xtext.xbase.lib" export="true"/>
+      <import plugin="org.eclipse.emf.ecore.xcore.lib" export="true"/>
+   </requires>
+
+   <runtime>
+      <library name=".">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated array -->
+      <package
+            uri="http://www.emfjson.org/jackson/model"
+            class="org.eclipse.emfcloud.jackson.junit.array.ArrayPackage"
+            genModel="target/test-classes/model/array.xcore"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated packageAnnotations -->
+      <package
+            uri="http://www.emfjson.org/jackson/annotations"
+            class="org.eclipse.emfcloud.jackson.junit.packageAnnotations.PackageAnnotationsPackage"
+            genModel="target/test-classes/model/packageAnnotations.xcore"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated model -->
+      <package
+            uri="http://www.emfjson.org/jackson/model"
+            class="org.eclipse.emfcloud.jackson.junit.model.ModelPackage"
+            genModel="target/test-classes/model/model.xcore"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated model -->
+      <parser
+            type="model"
+            class="org.eclipse.emfcloud.jackson.junit.model.util.ModelResourceFactoryImpl"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated generics -->
+      <package
+            uri="http://www.emfjson.org/jackson/generics"
+            class="org.eclipse.emfcloud.jackson.junit.generics.GenericsPackage"
+            genModel="target/test-classes/model/generics.xcore"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated annotations -->
+      <package
+            uri="http://www.emfjson.org/jackson/annotations"
+            class="org.eclipse.emfcloud.jackson.junit.annotations.AnnotationsPackage"
+            genModel="target/test-classes/model/annotations.xcore"/>
+   </extension>
+
+</plugin>
